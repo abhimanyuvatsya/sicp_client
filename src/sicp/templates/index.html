@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>SICP Tablet Controller</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2rem; background-color: #f4f4f4; }
+        h1 { margin-bottom: 0.5rem; }
+        table { border-collapse: collapse; width: 100%; background: white; }
+        th, td { padding: 0.6rem; border-bottom: 1px solid #ddd; text-align: left; }
+        th { background-color: #2c3e50; color: #fff; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        .controls { display: flex; gap: 1rem; align-items: center; }
+        .led-preview { display: inline-block; width: 1.5rem; height: 1.5rem; border: 1px solid #ccc; vertical-align: middle; }
+        form { display: inline-block; margin: 0; }
+        .status { font-size: 0.9rem; color: #333; }
+        .error { color: #c0392b; }
+        nav a { margin-right: 1rem; }
+    </style>
+</head>
+<body>
+    <h1>Philips SICP Tablet Controller</h1>
+    <nav>
+        <a href="/logs">View Logs</a>
+        <a href="/api/tablets">API</a>
+    </nav>
+    <table>
+        <thead>
+            <tr>
+                <th>Tablet</th>
+                <th>LED</th>
+                <th>Power</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for controller in tablets %}
+            {% set state = controller.state.as_dict() %}
+            <tr>
+                <td>
+                    <strong>{{ controller.config.name }}</strong><br>
+                    {{ controller.config.host }}:{{ controller.config.port }}
+                </td>
+                <td>
+                    <div class="controls">
+                        <span class="led-preview" style="background-color: {{ state.led_hex or '#000' }}"></span>
+                        <form action="/tablets/{{ controller.config.id }}/led" method="post">
+                            <input type="color" name="color" value="{{ state.led_hex or '#ffffff' }}">
+                            <label>
+                                <input type="radio" name="state" value="on" {% if state.led_on %}checked{% endif %}> On
+                            </label>
+                            <label>
+                                <input type="radio" name="state" value="off" {% if not state.led_on %}checked{% endif %}> Off
+                            </label>
+                            <button type="submit">Apply</button>
+                        </form>
+                    </div>
+                </td>
+                <td>
+                    <form action="/tablets/{{ controller.config.id }}/power" method="post">
+                        <button name="state" value="on" type="submit">Power On</button>
+                        <button name="state" value="off" type="submit">Power Off</button>
+                    </form>
+                    <div class="status">Current: <strong>{{ 'On' if state.power_on else 'Off' }}</strong></div>
+                </td>
+                <td class="status">
+                    {% if state.last_success %}Last sync: {{ state.last_success }}<br>{% endif %}
+                    {% if state.last_error %}
+                        <span class="error">Last error: {{ state.last_error }}</span>
+                    {% else %}
+                        Healthy
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

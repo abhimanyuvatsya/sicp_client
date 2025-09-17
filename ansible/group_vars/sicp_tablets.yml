@@ -1,0 +1,29 @@
+---
+sicp_tablets:
+  - id: tablet01
+    name: Conference Tablet
+    host: 192.168.2.101
+    poll_interval: 30
+  - id: tablet02
+    name: Lobby Tablet
+    host: 192.168.2.102
+    poll_interval: 30
+  - id: tablet03
+    name: Training Room Tablet
+    host: 192.168.2.103
+    poll_interval: 30
+  - id: tablet04
+    name: War Room Tablet
+    host: 192.168.2.104
+    poll_interval: 30
+  - id: tablet05
+    name: Breakout Tablet
+    host: 192.168.2.105
+    poll_interval: 30
+
+mqtt_host: mqtt.local
+mqtt_port: 1883
+mqtt_username: ""
+mqtt_password: ""
+mqtt_base_topic: "sicp"
+mqtt_ha_prefix: "homeassistant"

@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sicp-controller"
+version = "0.1.0"
+description = "Philips SICP tablet controller with MQTT and web UI"
+authors = [{ name = "Your Name" }]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "paho-mqtt",
+    "PyYAML",
+]
+
+[project.scripts]
+sicp-cli = "sicp.cli:main"
+sicp-service = "sicp.service:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
