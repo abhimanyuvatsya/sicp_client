@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="logs">
+  <h2>Recent Logs</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Timestamp</th>
+        <th>Level</th>
+        <th>Logger</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for record in records %}
+      <tr>
+        <td>{{ record.created }}</td>
+        <td>{{ record.level }}</td>
+        <td>{{ record.logger }}</td>
+        <td><pre>{{ record.message }}</pre></td>
+      </tr>
+      {% else %}
+      <tr>
+        <td colspan="4">No log entries captured.</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endblock %}

@@ -1,0 +1,31 @@
+logging:
+  level: {{ sicp_logging.level | to_json }}
+  path: {{ sicp_logging.path | to_json }}
+
+mqtt:
+  host: {{ sicp_mqtt.host | to_json }}
+  port: {{ sicp_mqtt.port }}
+  username: {{ sicp_mqtt.username | to_json }}
+  password: {{ sicp_mqtt.password | to_json }}
+  base_topic: {{ sicp_mqtt.base_topic | to_json }}
+  discovery_prefix: {{ sicp_mqtt.discovery_prefix | to_json }}
+  keepalive: {{ sicp_mqtt.keepalive }}
+  enabled: {{ sicp_mqtt.enabled | lower }}
+
+web:
+  host: {{ sicp_web.host | to_json }}
+  port: {{ sicp_web.port }}
+
+poll_on_startup: true
+
+tablets:
+{% for tablet in sicp_tablets %}
+  - identifier: {{ tablet.identifier | to_json }}
+    name: {{ tablet.name | to_json }}
+    host: {{ tablet.host | to_json }}
+    port: {{ tablet.port }}
+    timeout: {{ tablet.timeout }}
+    retries: {{ tablet.retries }}
+    retry_delay: {{ tablet.retry_delay }}
+    poll_interval: {{ tablet.poll_interval }}
+{% endfor %}

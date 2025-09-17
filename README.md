@@ -1,33 +1,84 @@
-# SICP LED Client
+# SICP Tablet Controller
 
-Python helper for sending Philips SICP frames to the LED accent strips on a signage device.
+This project manages Philips signage tablets over the SICP protocol. It offers:
 
-## Requirements
-- Python 3.9 or newer (ships with macOS / Linux distros)
+- A resilient controller for LED accent lighting and power state with retry and
+  confirmation checks.
+- Bidirectional MQTT integration for Home Assistant (autodiscovery enabled).
+- A FastAPI-powered web UI for manual control, log review, and status
+  dashboards.
+- An Ansible playbook for deploying the service to a Raspberry Pi (tested on Pi
+  3B running Raspberry Pi OS Lite).
+- A backwards-compatible command-line utility (`sicp_client.py`) for direct
+  frame testing.
 
-## Usage
+## Features
+
+- Two-way synchronization: the manager polls each configured tablet and pushes
+  updates to MQTT/Home Assistant while also accepting commands via MQTT.
+- Per-tablet retry policies and confirmation checks after every state change.
+- Structured logging with an in-memory buffer exposed through the web UI.
+- Web UI served locally on the Pi for manual overrides and debugging.
+- Support for managing multiple tablets from a single controller instance.
+
+## Running locally
+
+Create a virtual environment and install dependencies:
+
 ```bash
-python3 -B sicp_client.py set --color '#FFC800'               # turn strips on with warm yellow
-python3 -B sicp_client.py set --off                           # turn strips off
-python3 -B sicp_client.py get                                 # request current RGB status
-python3 -B sicp_client.py power on                            # power on the panel
-python3 -B sicp_client.py power off                           # power off the panel
-python3 -B sicp_client.py raw 09 01 00 F3 01 FF F2 00 F7 --reply  # send a custom frame
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 ```
 
-Flags:
-- `--host` defaults to `192.168.2.98`
-- `--port` defaults to `5000`
-- `--timeout` controls socket timeout in seconds (default `5.0`). Increase this if the
-  display responds slowly, e.g. `--timeout 10`.
-- `--retries` sets how many extra attempts to make after the first send (default `2`).
-- `--retry-delay` waits this many seconds between retries (default `1.0`).
-- `--color` accepts hex `RRGGBB` strings with or without a leading `#`.
+Copy `config.example.yml` to `config.yml` and adjust MQTT credentials and
+tablet IP addresses. Then launch the service:
 
-The script prints the exact SICP frame it sends (and any acknowledgement/reply). If you
-see `Unable to reach ...`, double-check network routing/firewalls and that the display is
-listening on port `5000`. Debug lines prefixed with `[debug]` describe the TCP exchange so
-you can see connection and reply details.
+```bash
+python main.py --config config.yml
+```
 
-Raw mode accepts bytes in hex (`FF`, `0xFF`) or decimal (`255`). Use `--reply` when you
-expect a response frame.
+By default the web UI listens on port `8080` (configurable via `config.yml`).
+
+## Home Assistant integration
+
+The controller publishes Home Assistant discovery topics for both a light (LED
+accent strip) and a switch (panel power) per tablet. MQTT topics follow the
+pattern `sicp/<tablet_id>/...` and use JSON payloads for the light to support RGB
+color selection.
+
+## Ansible deployment
+
+An Ansible playbook is included under the `ansible/` directory. Update
+`ansible/group_vars/all.yml` with your repository URL, MQTT credentials, and
+tablet list, then run:
+
+```bash
+ansible-playbook -i ansible/inventory.ini ansible/playbook.yml
+```
+
+The playbook installs the application under `/opt/sicp`, writes the configuration
+file to `/etc/sicp/config.yml`, and creates a `sicp.service` systemd unit.
+
+## Command-line utility
+
+The original CLI is still available for quick testing:
+
+```bash
+python3 -B sicp_client.py set --color '#FFC800'
+python3 -B sicp_client.py get
+python3 -B sicp_client.py power on
+python3 -B sicp_client.py power status
+```
+
+## Configuration reference
+
+See `config.example.yml` for all available options. Add or remove tablets by
+editing the configuration file (or updating the Ansible variables and rerunning
+the playbook).
+
+## Logging
+
+Logs are written to stdout, optionally a file (configured via `config.yml`), and
+are kept in an in-memory ring buffer for the web UI. Use the `/logs` page to
+inspect recent events, including retry attempts or protocol errors.

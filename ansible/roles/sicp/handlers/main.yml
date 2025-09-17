@@ -1,0 +1,10 @@
+---
+- name: Reload systemd
+  ansible.builtin.systemd:
+    daemon_reload: true
+
+- name: Restart sicp service
+  ansible.builtin.systemd:
+    name: sicp.service
+    state: restarted
+...

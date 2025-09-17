@@ -1,0 +1,80 @@
+---
+- name: Ensure service user exists
+  ansible.builtin.user:
+    name: "{{ sicp_service_user }}"
+    shell: /usr/sbin/nologin
+    system: true
+    create_home: false
+
+- name: Install system packages
+  ansible.builtin.apt:
+    name:
+      - python3
+      - python3-venv
+      - git
+      - python3-pip
+    update_cache: true
+
+- name: Create installation directories
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: directory
+    owner: "{{ sicp_service_user }}"
+    group: "{{ sicp_service_user }}"
+    mode: "0755"
+  loop:
+    - "{{ sicp_install_dir }}"
+    - "{{ sicp_install_dir }}/app"
+    - "{{ sicp_venv_path }}"
+    - "{{ sicp_config_path | dirname }}"
+    - "/var/log/sicp"
+
+- name: Clone SICP repository
+  ansible.builtin.git:
+    repo: "{{ sicp_repo_url }}"
+    dest: "{{ sicp_install_dir }}/app"
+    version: "{{ sicp_repo_version }}"
+    force: true
+    update: true
+    accept_hostkey: true
+  notify: Restart sicp service
+
+- name: Ensure virtual environment exists
+  ansible.builtin.command:
+    cmd: python3 -m venv "{{ sicp_venv_path }}"
+    creates: "{{ sicp_venv_path }}/bin/activate"
+
+- name: Install Python dependencies
+  ansible.builtin.pip:
+    requirements: "{{ sicp_install_dir }}/app/requirements.txt"
+    virtualenv: "{{ sicp_venv_path }}"
+    virtualenv_python: python3
+  notify: Restart sicp service
+
+- name: Deploy configuration file
+  ansible.builtin.template:
+    src: config.yml.j2
+    dest: "{{ sicp_config_path }}"
+    owner: "{{ sicp_service_user }}"
+    group: "{{ sicp_service_user }}"
+    mode: "0640"
+  notify: Restart sicp service
+
+- name: Install systemd service unit
+  ansible.builtin.template:
+    src: sicp.service.j2
+    dest: /etc/systemd/system/sicp.service
+    owner: root
+    group: root
+    mode: "0644"
+  notify:
+    - Reload systemd
+    - Restart sicp service
+
+- name: Enable and start service
+  ansible.builtin.systemd:
+    name: sicp.service
+    enabled: true
+    state: started
+
+...
