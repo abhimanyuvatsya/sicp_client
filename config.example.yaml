@@ -1,0 +1,31 @@
+# Example configuration for the SICP tablet service
+mqtt:
+  host: 192.168.2.10
+  port: 1883
+  username: your_username
+  password: your_password
+  base_topic: sicp_tablets
+  client_id_prefix: sicp
+  keepalive: 60
+  tls_enabled: false
+home_assistant:
+  enabled: true
+  discovery_prefix: homeassistant
+polling:
+  interval_seconds: 30
+  timeout_seconds: 3
+  retry_attempts: 2
+  retry_delay_seconds: 1
+web:
+  host: 0.0.0.0
+  port: 8080
+log_directory: /var/log/sicp_service
+tablets:
+  - id: lobby
+    name: Lobby Tablet
+    host: 192.168.2.101
+    port: 5000
+  - id: conference
+    name: Conference Room Tablet
+    host: 192.168.2.102
+    port: 5000

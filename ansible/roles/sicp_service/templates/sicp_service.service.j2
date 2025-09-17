@@ -1,0 +1,20 @@
+[Unit]
+Description=Philips SICP Tablet Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User={{ sicp_service_user }}
+Group={{ sicp_service_group }}
+WorkingDirectory={{ sicp_service_root }}/app
+Environment="PATH={{ sicp_service_root }}/venv/bin"
+{% for key, value in sicp_service_environment.items() %}Environment="{{ key }}={{ value }}"
+{% endfor %}
+ExecStart={{ sicp_service_root }}/venv/bin/python -m sicp_service.main --config {{ sicp_service_config_path }}
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=30
+
+[Install]
+WantedBy=multi-user.target

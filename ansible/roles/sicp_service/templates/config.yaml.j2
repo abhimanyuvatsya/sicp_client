@@ -1,0 +1,49 @@
+mqtt:
+  host: {{ sicp_service_mqtt.host }}
+  port: {{ sicp_service_mqtt.port }}
+{% if sicp_service_mqtt.username %}
+  username: {{ sicp_service_mqtt.username }}
+{% endif %}
+{% if sicp_service_mqtt.password %}
+  password: {{ sicp_service_mqtt.password }}
+{% endif %}
+  base_topic: {{ sicp_service_mqtt.base_topic }}
+  client_id_prefix: {{ sicp_service_mqtt.client_id_prefix }}
+  keepalive: {{ sicp_service_mqtt.keepalive }}
+  tls_enabled: {{ sicp_service_mqtt.tls_enabled | bool | lower }}
+{% if sicp_service_mqtt.tls_ca_cert %}
+  tls_ca_cert: {{ sicp_service_mqtt.tls_ca_cert }}
+{% endif %}
+
+home_assistant:
+  enabled: {{ sicp_service_home_assistant.enabled | bool | lower }}
+  discovery_prefix: {{ sicp_service_home_assistant.discovery_prefix }}
+
+polling:
+  interval_seconds: {{ sicp_service_polling.interval_seconds }}
+  timeout_seconds: {{ sicp_service_polling.timeout_seconds }}
+  retry_attempts: {{ sicp_service_polling.retry_attempts }}
+  retry_delay_seconds: {{ sicp_service_polling.retry_delay_seconds }}
+
+web:
+  host: {{ sicp_service_web.host }}
+  port: {{ sicp_service_web.port }}
+
+log_directory: {{ sicp_service_log_dir }}
+
+tablets:
+{% if sicp_service_tablets | length == 0 %}
+  - id: example
+    host: 192.168.2.100
+{% else %}
+{% for tablet in sicp_service_tablets %}
+  - id: {{ tablet.id }}
+    host: {{ tablet.host }}
+{% if tablet.port is defined %}
+    port: {{ tablet.port }}
+{% endif %}
+{% if tablet.name is defined %}
+    name: {{ tablet.name }}
+{% endif %}
+{% endfor %}
+{% endif %}

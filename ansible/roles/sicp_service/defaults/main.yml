@@ -1,0 +1,32 @@
+---
+sicp_service_user: sicp
+sicp_service_group: sicp
+sicp_service_root: /opt/sicp_service
+sicp_service_config_path: /etc/sicp_service/config.yaml
+sicp_service_log_dir: /var/log/sicp_service
+sicp_service_repo_url: ""
+sicp_service_repo_version: "main"
+sicp_service_local_src: ""
+sicp_service_tablets: []
+sicp_service_mqtt:
+  host: 127.0.0.1
+  port: 1883
+  username: ""
+  password: ""
+  base_topic: sicp_tablets
+  client_id_prefix: sicp
+  keepalive: 60
+  tls_enabled: false
+  tls_ca_cert: ""
+sicp_service_home_assistant:
+  enabled: true
+  discovery_prefix: homeassistant
+sicp_service_polling:
+  interval_seconds: 30
+  timeout_seconds: 3
+  retry_attempts: 2
+  retry_delay_seconds: 1
+sicp_service_web:
+  host: 0.0.0.0
+  port: 8080
+sicp_service_environment: {}
