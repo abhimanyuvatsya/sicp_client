@@ -1,0 +1,18 @@
+[Unit]
+Description=SICP Tablet Controller
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User={{ sicp_service_user }}
+Group={{ sicp_service_user }}
+WorkingDirectory={{ sicp_install_dir }}/app
+Environment=SICP_CONFIG={{ sicp_config_path }}
+ExecStart={{ sicp_venv_path }}/bin/python {{ sicp_install_dir }}/app/main.py --config {{ sicp_config_path }}
+Restart=on-failure
+RestartSec=5
+StandardOutput=append:/var/log/sicp/service.log
+StandardError=append:/var/log/sicp/service.log
+
+[Install]
+WantedBy=multi-user.target

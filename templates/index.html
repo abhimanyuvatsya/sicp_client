@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="tablets">
+  {% for tablet in config.tablets %}
+  {% set status = statuses.get(tablet.identifier) %}
+  <article class="tablet">
+    <header>
+      <h2>{{ tablet.name }}</h2>
+      <span class="status {{ 'online' if status and status.available else 'offline' }}">{{ 'Online' if status and status.available else 'Offline' }}</span>
+    </header>
+    <div class="details">
+      <p><strong>LED:</strong> {{ 'ON' if status and status.led and status.led.on else 'OFF' }} {% if status and status.led %}({{ status.led.hex_color }}){% endif %}</p>
+      <p><strong>Power:</strong> {{ 'ON' if status and status.power and status.power.on else 'OFF' }}</p>
+      <p><strong>Last Update:</strong> {{ status.last_update if status else 'Never' }}</p>
+      {% if status and status.last_error %}<p class="error">Last error: {{ status.last_error }}</p>{% endif %}
+    </div>
+    <div class="controls">
+      <form action="/tablets/{{ tablet.identifier }}/led" method="post">
+        <label>
+          Color
+          <input type="color" name="color" value="{{ status.led.hex_color if status and status.led else '#FFFFFF' }}" />
+        </label>
+        <button type="submit" name="state" value="ON">Turn On</button>
+        <button type="submit" name="state" value="OFF">Turn Off</button>
+      </form>
+      <form action="/tablets/{{ tablet.identifier }}/power" method="post">
+        <button type="submit" name="state" value="ON">Power On</button>
+        <button type="submit" name="state" value="OFF">Power Off</button>
+      </form>
+    </div>
+  </article>
+  {% else %}
+  <p>No tablets configured.</p>
+  {% endfor %}
+</section>
+{% endblock %}

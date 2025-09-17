@@ -1,0 +1,67 @@
+---
+sicp_repo_url: "https://github.com/your-org/sicp_client.git"
+sicp_repo_version: "main"
+sicp_service_user: "sicp"
+sicp_install_dir: "/opt/sicp"
+sicp_config_path: "/etc/sicp/config.yml"
+sicp_venv_path: "/opt/sicp/venv"
+
+sicp_mqtt:
+  host: "127.0.0.1"
+  port: 1883
+  username: ""  # fill in via Ansible vault or override inventory
+  password: ""
+  base_topic: "sicp"
+  discovery_prefix: "homeassistant"
+  keepalive: 60
+  enabled: true
+
+sicp_web:
+  host: "0.0.0.0"
+  port: 8080
+
+sicp_logging:
+  level: "INFO"
+  path: "/var/log/sicp/service.log"
+
+sicp_tablets:
+  - identifier: "tablet01"
+    name: "Lobby Display"
+    host: "192.168.2.101"
+    port: 5000
+    timeout: 5.0
+    retries: 2
+    retry_delay: 1.0
+    poll_interval: 30.0
+  - identifier: "tablet02"
+    name: "Conference Room Display"
+    host: "192.168.2.102"
+    port: 5000
+    timeout: 5.0
+    retries: 2
+    retry_delay: 1.0
+    poll_interval: 30.0
+  - identifier: "tablet03"
+    name: "Cafeteria Display"
+    host: "192.168.2.103"
+    port: 5000
+    timeout: 5.0
+    retries: 2
+    retry_delay: 1.0
+    poll_interval: 30.0
+  - identifier: "tablet04"
+    name: "Reception Display"
+    host: "192.168.2.104"
+    port: 5000
+    timeout: 5.0
+    retries: 2
+    retry_delay: 1.0
+    poll_interval: 30.0
+  - identifier: "tablet05"
+    name: "Training Room Display"
+    host: "192.168.2.105"
+    port: 5000
+    timeout: 5.0
+    retries: 2
+    retry_delay: 1.0
+    poll_interval: 30.0

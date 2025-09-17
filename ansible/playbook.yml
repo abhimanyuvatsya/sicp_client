@@ -1,0 +1,8 @@
+---
+- name: Deploy SICP tablet controller
+  hosts: sicp_tablets
+  become: true
+  vars_files:
+    - group_vars/all.yml
+  roles:
+    - sicp

@@ -1,0 +1,42 @@
+# Example configuration for the SICP controller service
+logging:
+  level: INFO
+  path: /var/log/sicp/service.log
+
+mqtt:
+  host: 127.0.0.1
+  port: 1883
+  username: your-mqtt-username
+  password: your-mqtt-password
+  base_topic: sicp
+  discovery_prefix: homeassistant
+  keepalive: 60
+  enabled: true
+
+web:
+  host: 0.0.0.0
+  port: 8080
+
+poll_on_startup: true
+
+tablets:
+  - identifier: tablet01
+    name: Lobby Display
+    host: 192.168.2.101
+    port: 5000
+    timeout: 5.0
+    retries: 2
+    retry_delay: 1.0
+    poll_interval: 30.0
+  - identifier: tablet02
+    name: Conference Room Display
+    host: 192.168.2.102
+  - identifier: tablet03
+    name: Cafeteria Display
+    host: 192.168.2.103
+  - identifier: tablet04
+    name: Reception Display
+    host: 192.168.2.104
+  - identifier: tablet05
+    name: Training Room Display
+    host: 192.168.2.105
