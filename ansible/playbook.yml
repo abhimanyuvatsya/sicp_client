@@ -1,0 +1,119 @@
+---
+- name: Deploy Philips SICP controller
+  hosts: sicp_tablets
+  become: true
+  vars:
+    sicp_repo_url: "https://example.com/your/sicp-controller.git"
+    sicp_repo_version: "main"
+    sicp_install_dir: "/opt/sicp-controller"
+    sicp_app_dir: "{{ sicp_install_dir }}/app"
+    sicp_venv_dir: "{{ sicp_install_dir }}/venv"
+    sicp_service_user: "sicp"
+    sicp_service_group: "sicp"
+    sicp_config_path: "/etc/sicp/config.yaml"
+    sicp_socket_timeout: 5.0
+    sicp_socket_retries: 2
+    sicp_socket_retry_delay: 1.0
+    sicp_web_host: "0.0.0.0"
+    sicp_web_port: 8080
+    sicp_log_buffer: 2000
+    mqtt_host: "mqtt.local"
+    mqtt_port: 1883
+    mqtt_username: ""
+    mqtt_password: ""
+    mqtt_base_topic: "sicp"
+    mqtt_ha_prefix: "homeassistant"
+    sicp_tablets: []
+  pre_tasks:
+    - name: Ensure apt cache is updated
+      ansible.builtin.apt:
+        update_cache: true
+      when: ansible_facts.os_family == "Debian"
+
+  tasks:
+    - name: Install required packages
+      ansible.builtin.apt:
+        name:
+          - git
+          - python3
+          - python3-venv
+          - python3-pip
+        state: present
+
+    - name: Ensure service group exists
+      ansible.builtin.group:
+        name: "{{ sicp_service_group }}"
+        system: true
+
+    - name: Ensure service user exists
+      ansible.builtin.user:
+        name: "{{ sicp_service_user }}"
+        group: "{{ sicp_service_group }}"
+        shell: "/usr/sbin/nologin"
+        create_home: false
+        system: true
+
+    - name: Create installation directories
+      ansible.builtin.file:
+        path: "{{ item }}"
+        state: directory
+        owner: "{{ sicp_service_user }}"
+        group: "{{ sicp_service_group }}"
+        mode: "0755"
+      loop:
+        - "{{ sicp_install_dir }}"
+        - "{{ sicp_app_dir }}"
+
+    - name: Checkout controller source
+      ansible.builtin.git:
+        repo: "{{ sicp_repo_url }}"
+        version: "{{ sicp_repo_version }}"
+        dest: "{{ sicp_app_dir }}"
+        update: true
+        force: true
+      notify: Restart sicp service
+
+    - name: Ensure virtual environment exists
+      ansible.builtin.command:
+        cmd: "python3 -m venv {{ sicp_venv_dir }}"
+        creates: "{{ sicp_venv_dir }}/bin/activate"
+
+    - name: Install controller package
+      ansible.builtin.pip:
+        requirements: null
+        name: .
+        virtualenv: "{{ sicp_venv_dir }}"
+        virtualenv_command: "python3 -m venv"
+        chdir: "{{ sicp_app_dir }}"
+      notify: Restart sicp service
+
+    - name: Deploy configuration file
+      ansible.builtin.template:
+        src: "config.yaml.j2"
+        dest: "{{ sicp_config_path }}"
+        owner: "{{ sicp_service_user }}"
+        group: "{{ sicp_service_group }}"
+        mode: "0640"
+      notify: Restart sicp service
+
+    - name: Install systemd service unit
+      ansible.builtin.template:
+        src: "sicp.service.j2"
+        dest: "/etc/systemd/system/sicp.service"
+        owner: root
+        group: root
+        mode: "0644"
+      notify: Restart sicp service
+
+    - name: Enable and start service
+      ansible.builtin.systemd:
+        name: sicp.service
+        enabled: true
+        state: started
+
+  handlers:
+    - name: Restart sicp service
+      ansible.builtin.systemd:
+        name: sicp.service
+        daemon_reload: true
+        state: restarted

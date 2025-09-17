@@ -1,0 +1,16 @@
+[Unit]
+Description=Philips SICP tablet controller
+After=network.target
+
+[Service]
+Type=simple
+User={{ sicp_service_user }}
+Group={{ sicp_service_group }}
+WorkingDirectory={{ sicp_app_dir }}
+Environment=PYTHONUNBUFFERED=1
+ExecStart={{ sicp_venv_dir }}/bin/sicp-service --config {{ sicp_config_path }}
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
