@@ -318,7 +318,7 @@ def build_parser() -> argparse.ArgumentParser:
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     set_parser = subparsers.add_parser("set", help="Set LED on/off and color")
-    set_parser.add_argument("--color", default="#FFFFFF", help="Hex color RRGGBB (e.g. #FF8800")
+    set_parser.add_argument("--color", default="#FFFFFF", help="Hex color RRGGBB (e.g. #FF8800)")
     set_parser.add_argument("--off", action="store_true", help="Turn LEDs off instead of on")
     set_parser.set_defaults(func=handle_set)
 

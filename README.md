@@ -1,4 +1,3 @@
-````markdown
 # SICP LED Client
 
 Python helper for sending Philips SICP frames to the LED accent strips on a signage device.
@@ -32,5 +31,3 @@ you can see connection and reply details.
 
 Raw mode accepts bytes in hex (`FF`, `0xFF`) or decimal (`255`). Use `--reply` when you
 expect a response frame.
-
-````
