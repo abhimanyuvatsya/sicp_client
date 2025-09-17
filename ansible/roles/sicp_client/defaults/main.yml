@@ -1,0 +1,12 @@
+---
+sicp_service_user: sicp
+sicp_service_group: sicp
+sicp_app_dir: /opt/sicp-service
+sicp_config_dir: /etc/sicp
+sicp_repo_url: ""
+sicp_repo_version: "main"
+sicp_python: /usr/bin/python3
+sicp_venv: "{{ sicp_app_dir }}/venv"
+sicp_config_file: "{{ sicp_config_dir }}/config.yml"
+sicp_requirements: requirements.txt
+sicp_service_name: sicp
