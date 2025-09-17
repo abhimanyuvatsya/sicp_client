@@ -1,0 +1,6 @@
+---
+- name: Deploy Philips SICP control service
+  hosts: sicp_tablets
+  become: true
+  roles:
+    - role: sicp_client

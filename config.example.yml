@@ -1,0 +1,45 @@
+---
+# Default polling interval in seconds used when a tablet does not override it.
+default_poll_interval: 45
+
+# Optional default values applied to each tablet entry.
+tablet_defaults:
+  port: 5000
+  timeout: 5
+  retries: 2
+  retry_delay: 1
+  poll_interval: 45
+  ha_light: true
+  ha_power_switch: true
+
+# List of tablets managed by the service.
+tablets:
+  - name: "Lobby Tablet"
+    host: "192.168.2.91"
+  - name: "Reception Tablet"
+    host: "192.168.2.92"
+  - name: "Conference Room"
+    host: "192.168.2.93"
+  - name: "Showroom"
+    host: "192.168.2.94"
+  - name: "Warehouse"
+    host: "192.168.2.95"
+
+# MQTT bridge configuration. Credentials are supplied via ansible vault or environment.
+mqtt:
+  host: "mqtt.local"
+  port: 1883
+  username: "ha_user"
+  password: "ha_password"
+  base_topic: "sicp"
+  discovery_prefix: "homeassistant"
+  client_id: "sicp-pi"
+  keepalive: 60
+  reconnect_interval: 5
+  enable_tls: false
+
+# Web UI binding options.
+web:
+  bind_host: "0.0.0.0"
+  bind_port: 8080
+  log_history: 2000

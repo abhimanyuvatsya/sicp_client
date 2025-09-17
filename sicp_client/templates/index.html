@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>SICP Control Service</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; }
+    header { background: #0b3d91; color: white; padding: 1rem 2rem; }
+    main { padding: 1.5rem; }
+    section { background: white; margin-bottom: 1.5rem; padding: 1rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    h2 { margin-top: 0; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+    th, td { border-bottom: 1px solid #ddd; padding: 0.5rem; text-align: left; }
+    th { background: #f0f0f0; }
+    .status-online { color: #0a8f2a; font-weight: bold; }
+    .status-offline { color: #c62828; font-weight: bold; }
+    form { display: inline-block; margin-right: 0.5rem; }
+    label { margin-right: 0.25rem; }
+    input[type="text"] { padding: 0.3rem; }
+    button { padding: 0.4rem 0.8rem; border: none; border-radius: 4px; background: #0b3d91; color: white; cursor: pointer; }
+    button.secondary { background: #555; }
+    button.danger { background: #c62828; }
+    pre { background: #111; color: #f5f5f5; padding: 0.5rem; max-height: 20rem; overflow-y: auto; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SICP Control Service</h1>
+    <p>Manage connected Philips signage tablets, monitor status, and trigger actions manually.</p>
+  </header>
+  <main>
+    {% for slug, state in states.items() %}
+      <section>
+        <h2>{{ state.name }} ({{ slug }})</h2>
+        <table>
+          <tr>
+            <th>Status</th>
+            <td>
+              {% if state.online %}
+                <span class="status-online">Online</span>
+              {% else %}
+                <span class="status-offline">Offline</span>
+              {% endif %}
+            </td>
+          </tr>
+          <tr>
+            <th>LED</th>
+            <td>{{ "On" if state.led_on else "Off" }} {% if state.led_hex %}({{ state.led_hex }}){% endif %}</td>
+          </tr>
+          <tr>
+            <th>Power</th>
+            <td>{{ "On" if state.power_on else "Off" }}</td>
+          </tr>
+          <tr>
+            <th>Last success</th>
+            <td>{{ state.last_success or "Never" }}</td>
+          </tr>
+          <tr>
+            <th>Last error</th>
+            <td>{{ state.last_error or "-" }}</td>
+          </tr>
+        </table>
+        <div>
+          <form method="post" action="/tablet/{{ slug }}/led">
+            <label for="color-{{ slug }}">Color</label>
+            <input id="color-{{ slug }}" name="color" type="text" value="{{ state.led_hex or '#FFFFFF' }}" placeholder="#RRGGBB" />
+            <input type="hidden" name="state" value="ON" />
+            <button type="submit">Set LED</button>
+          </form>
+          <form method="post" action="/tablet/{{ slug }}/led">
+            <input type="hidden" name="state" value="OFF" />
+            <button type="submit" class="secondary">Turn LED Off</button>
+          </form>
+          <form method="post" action="/tablet/{{ slug }}/power">
+            <input type="hidden" name="state" value="ON" />
+            <button type="submit">Power On</button>
+          </form>
+          <form method="post" action="/tablet/{{ slug }}/power">
+            <input type="hidden" name="state" value="OFF" />
+            <button type="submit" class="danger">Power Off</button>
+          </form>
+          <form method="post" action="/tablet/{{ slug }}/refresh">
+            <button type="submit" class="secondary">Refresh Status</button>
+          </form>
+        </div>
+      </section>
+    {% endfor %}
+    <section>
+      <h2>Recent Logs</h2>
+      <pre>{% for line in service.logs() %}{{ line }}
+{% endfor %}</pre>
+    </section>
+  </main>
+</body>
+</html>

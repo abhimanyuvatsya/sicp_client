@@ -1,0 +1,116 @@
+---
+- name: Ensure system packages are present
+  ansible.builtin.apt:
+    update_cache: true
+    cache_valid_time: 3600
+    name:
+      - python3
+      - python3-venv
+      - python3-pip
+      - git
+      - build-essential
+  become: true
+
+- name: Ensure service group exists
+  ansible.builtin.group:
+    name: "{{ sicp_service_group }}"
+    system: true
+  become: true
+
+- name: Ensure service user exists
+  ansible.builtin.user:
+    name: "{{ sicp_service_user }}"
+    group: "{{ sicp_service_group }}"
+    create_home: false
+    system: true
+  become: true
+
+- name: Ensure application directory exists
+  ansible.builtin.file:
+    path: "{{ sicp_app_dir }}"
+    state: directory
+    owner: "{{ sicp_service_user }}"
+    group: "{{ sicp_service_group }}"
+    mode: "0755"
+  become: true
+
+- name: Ensure configuration directory exists
+  ansible.builtin.file:
+    path: "{{ sicp_config_dir }}"
+    state: directory
+    owner: "{{ sicp_service_user }}"
+    group: "{{ sicp_service_group }}"
+    mode: "0750"
+  become: true
+
+- name: Checkout service source
+  ansible.builtin.git:
+    repo: "{{ sicp_repo_url }}"
+    dest: "{{ sicp_app_dir }}/src"
+    version: "{{ sicp_repo_version }}"
+    update: true
+  when: sicp_repo_url | length > 0
+  become: true
+  become_user: "{{ sicp_service_user }}"
+
+- name: Copy local source tree when repo url is not provided
+  ansible.posix.synchronize:
+    src: "{{ playbook_dir }}/.."
+    dest: "{{ sicp_app_dir }}/src"
+    delete: true
+    rsync_opts:
+      - "--exclude=.git"
+      - "--exclude=__pycache__"
+      - "--omit-dir-times"
+  when: sicp_repo_url | length == 0
+  become: true
+
+- name: Ensure source tree ownership
+  ansible.builtin.file:
+    path: "{{ sicp_app_dir }}/src"
+    state: directory
+    recurse: true
+    owner: "{{ sicp_service_user }}"
+    group: "{{ sicp_service_group }}"
+  become: true
+
+- name: Ensure virtual environment exists
+  ansible.builtin.command:
+    cmd: "{{ sicp_python }} -m venv {{ sicp_venv }}"
+    creates: "{{ sicp_venv }}/bin/activate"
+  become: true
+  become_user: "{{ sicp_service_user }}"
+
+- name: Install Python dependencies
+  ansible.builtin.pip:
+    requirements: "{{ sicp_app_dir }}/src/{{ sicp_requirements }}"
+    virtualenv: "{{ sicp_venv }}"
+    virtualenv_python: "{{ sicp_python }}"
+  become: true
+  become_user: "{{ sicp_service_user }}"
+
+- name: Deploy SICP configuration
+  ansible.builtin.template:
+    src: config.yml.j2
+    dest: "{{ sicp_config_file }}"
+    owner: "{{ sicp_service_user }}"
+    group: "{{ sicp_service_group }}"
+    mode: "0640"
+  notify: restart sicp service
+  become: true
+
+- name: Install systemd unit
+  ansible.builtin.template:
+    src: sicp.service.j2
+    dest: "/etc/systemd/system/{{ sicp_service_name }}.service"
+    mode: "0644"
+  notify: restart sicp service
+  become: true
+
+- name: Enable service
+  ansible.builtin.systemd:
+    name: "{{ sicp_service_name }}.service"
+    enabled: true
+    state: started
+    daemon_reload: true
+  become: true

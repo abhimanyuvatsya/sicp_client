@@ -1,0 +1,17 @@
+[Unit]
+Description=Philips SICP Control Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User={{ sicp_service_user }}
+Group={{ sicp_service_group }}
+WorkingDirectory={{ sicp_app_dir }}/src
+Environment=SICP_CONFIG={{ sicp_config_file }}
+ExecStart={{ sicp_venv }}/bin/python {{ sicp_app_dir }}/src/sicp_service.py --config {{ sicp_config_file }}
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
