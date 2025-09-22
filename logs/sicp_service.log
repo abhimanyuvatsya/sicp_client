@@ -1,0 +1,1405 @@
+2025-09-22 17:40:29 INFO [sicp_service.manager] Starting tablet manager with 1 tablets
+2025-09-22 17:40:29 INFO [sicp_service.mqtt] Starting MQTT manager
+2025-09-22 17:40:29 INFO [__main__] Web server listening on 127.0.0.1:8080
+2025-09-22 17:40:29 INFO [sicp_service.mqtt] Stopping MQTT manager
+2025-09-22 17:40:29 INFO [sicp_service.manager] Stopping tablet manager
+2025-09-22 17:40:29 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 127.0.0.1:5000: Unable to reach 127.0.0.1:5000: [Errno 1] Operation not permitted
+2025-09-22 17:40:30 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 127.0.0.1:5000: Unable to reach 127.0.0.1:5000: [Errno 1] Operation not permitted
+2025-09-22 17:40:31 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 127.0.0.1:5000: Unable to reach 127.0.0.1:5000: [Errno 1] Operation not permitted
+2025-09-22 17:41:08 INFO [sicp_service.manager] Starting tablet manager with 1 tablets
+2025-09-22 17:41:08 INFO [sicp_service.mqtt] Starting MQTT manager
+2025-09-22 17:41:08 INFO [__main__] Web server listening on 127.0.0.1:8080
+2025-09-22 17:41:08 INFO [uvicorn.error] Started server process [8094]
+2025-09-22 17:41:08 INFO [uvicorn.error] Waiting for application startup.
+2025-09-22 17:41:08 INFO [sicp_service.mqtt] Connecting to MQTT broker localhost:1883
+2025-09-22 17:41:08 INFO [uvicorn.error] Application startup complete.
+2025-09-22 17:41:08 ERROR [uvicorn.error] [Errno 1] error while attempting to bind on address ('127.0.0.1', 8080): [errno 1] operation not permitted
+2025-09-22 17:41:08 INFO [uvicorn.error] Waiting for application shutdown.
+2025-09-22 17:41:08 INFO [uvicorn.error] Application shutdown complete.
+2025-09-22 17:41:08 INFO [sicp_service.mqtt] Stopping MQTT manager
+2025-09-22 17:41:08 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 127.0.0.1:5000: Unable to reach 127.0.0.1:5000: [Errno 1] Operation not permitted
+2025-09-22 17:41:09 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 127.0.0.1:5000: Unable to reach 127.0.0.1:5000: [Errno 1] Operation not permitted
+2025-09-22 17:41:10 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 127.0.0.1:5000: Unable to reach 127.0.0.1:5000: [Errno 1] Operation not permitted
+2025-09-22 17:43:46 INFO [sicp_service.manager] Starting tablet manager with 5 tablets
+2025-09-22 17:43:46 INFO [sicp_service.mqtt] Starting MQTT manager
+2025-09-22 17:43:46 INFO [__main__] Web server listening on 127.0.0.1:8080
+2025-09-22 17:43:46 INFO [uvicorn.error] Started server process [8555]
+2025-09-22 17:43:46 INFO [uvicorn.error] Waiting for application startup.
+2025-09-22 17:43:46 INFO [sicp_service.mqtt] Connecting to MQTT broker localhost:1883
+2025-09-22 17:43:46 INFO [uvicorn.error] Application startup complete.
+2025-09-22 17:43:46 INFO [uvicorn.error] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2025-09-22 17:43:49 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.189:5000: Unable to reach 192.168.2.189:5000: timed out
+2025-09-22 17:43:49 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.98:5000: Unable to reach 192.168.2.98:5000: timed out
+2025-09-22 17:43:49 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.92:5000: Unable to reach 192.168.2.92:5000: timed out
+2025-09-22 17:43:50 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:43:50 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.18:5000: Unable to reach 192.168.2.18:5000: timed out
+2025-09-22 17:43:53 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.98:5000: Unable to reach 192.168.2.98:5000: timed out
+2025-09-22 17:43:53 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.189:5000: Unable to reach 192.168.2.189:5000: timed out
+2025-09-22 17:43:53 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.92:5000: Unable to reach 192.168.2.92:5000: timed out
+2025-09-22 17:43:54 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:43:54 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.18:5000: Unable to reach 192.168.2.18:5000: timed out
+2025-09-22 17:43:54 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.98:5000: Unable to reach 192.168.2.98:5000: [Errno 64] Host is down
+2025-09-22 17:43:54 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.189:5000: Unable to reach 192.168.2.189:5000: [Errno 64] Host is down
+2025-09-22 17:43:54 WARNING [sicp_service.manager] Communication failure with office: Unable to reach 192.168.2.98:5000: [Errno 64] Host is down
+2025-09-22 17:43:54 WARNING [sicp_service.manager] Communication failure with bathroom: Unable to reach 192.168.2.189:5000: [Errno 64] Host is down
+2025-09-22 17:43:57 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.92:5000: Unable to reach 192.168.2.92:5000: timed out
+2025-09-22 17:43:57 WARNING [sicp_service.manager] Communication failure with hallway: Unable to reach 192.168.2.92:5000: timed out
+2025-09-22 17:43:58 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:43:58 WARNING [sicp_service.manager] Communication failure with spare: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:43:58 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.18:5000: Unable to reach 192.168.2.18:5000: timed out
+2025-09-22 17:43:58 WARNING [sicp_service.manager] Communication failure with guest: Unable to reach 192.168.2.18:5000: timed out
+2025-09-22 17:44:27 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.98:5000: Unable to reach 192.168.2.98:5000: timed out
+2025-09-22 17:44:29 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.189:5000: Unable to reach 192.168.2.189:5000: timed out
+2025-09-22 17:44:31 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:44:31 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.92:5000: Unable to reach 192.168.2.92:5000: timed out
+2025-09-22 17:44:31 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.18:5000: Unable to reach 192.168.2.18:5000: timed out
+2025-09-22 17:44:33 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.98:5000: Unable to reach 192.168.2.98:5000: timed out
+2025-09-22 17:44:34 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.189:5000: Unable to reach 192.168.2.189:5000: timed out
+2025-09-22 17:44:35 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.92:5000: Unable to reach 192.168.2.92:5000: timed out
+2025-09-22 17:44:35 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.18:5000: Unable to reach 192.168.2.18:5000: timed out
+2025-09-22 17:44:35 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:44:38 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.98:5000: Unable to reach 192.168.2.98:5000: timed out
+2025-09-22 17:44:39 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.92:5000: Unable to reach 192.168.2.92:5000: timed out
+2025-09-22 17:44:39 WARNING [sicp_service.manager] Communication failure with hallway: Unable to reach 192.168.2.92:5000: timed out
+2025-09-22 17:44:39 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.189:5000: Unable to reach 192.168.2.189:5000: timed out
+2025-09-22 17:44:39 WARNING [sicp_service.manager] Communication failure with bathroom: Unable to reach 192.168.2.189:5000: timed out
+2025-09-22 17:44:39 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.18:5000: Unable to reach 192.168.2.18:5000: timed out
+2025-09-22 17:44:39 WARNING [sicp_service.manager] Communication failure with guest: Unable to reach 192.168.2.18:5000: timed out
+2025-09-22 17:44:40 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:44:42 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.98:5000: Unable to reach 192.168.2.98:5000: timed out
+2025-09-22 17:44:42 WARNING [sicp_service.manager] Communication failure with office: Unable to reach 192.168.2.98:5000: timed out
+2025-09-22 17:44:44 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:44:44 WARNING [sicp_service.manager] Communication failure with spare: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:45:12 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.92:5000: Unable to reach 192.168.2.92:5000: timed out
+2025-09-22 17:45:13 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.18:5000: Unable to reach 192.168.2.18:5000: timed out
+2025-09-22 17:45:13 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.189:5000: Unable to reach 192.168.2.189:5000: timed out
+2025-09-22 17:45:16 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.92:5000: Unable to reach 192.168.2.92:5000: timed out
+2025-09-22 17:45:17 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.98:5000: Unable to reach 192.168.2.98:5000: timed out
+2025-09-22 17:45:17 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.18:5000: Unable to reach 192.168.2.18:5000: timed out
+2025-09-22 17:45:18 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:45:18 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.189:5000: Unable to reach 192.168.2.189:5000: timed out
+2025-09-22 17:45:20 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.92:5000: Unable to reach 192.168.2.92:5000: timed out
+2025-09-22 17:45:20 WARNING [sicp_service.manager] Communication failure with hallway: Unable to reach 192.168.2.92:5000: timed out
+2025-09-22 17:45:21 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.18:5000: Unable to reach 192.168.2.18:5000: timed out
+2025-09-22 17:45:21 WARNING [sicp_service.manager] Communication failure with guest: Unable to reach 192.168.2.18:5000: timed out
+2025-09-22 17:45:22 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:45:22 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.98:5000: Unable to reach 192.168.2.98:5000: timed out
+2025-09-22 17:45:24 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.189:5000: Unable to reach 192.168.2.189:5000: timed out
+2025-09-22 17:45:24 WARNING [sicp_service.manager] Communication failure with bathroom: Unable to reach 192.168.2.189:5000: timed out
+2025-09-22 17:45:27 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.98:5000: Unable to reach 192.168.2.98:5000: timed out
+2025-09-22 17:45:27 WARNING [sicp_service.manager] Communication failure with office: Unable to reach 192.168.2.98:5000: timed out
+2025-09-22 17:45:27 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:45:27 WARNING [sicp_service.manager] Communication failure with spare: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:45:38 INFO [sicp_service.mqtt] Stopping MQTT manager
+2025-09-22 17:45:38 ERROR [uvicorn.error] Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 61, in run_service
+    await server.serve()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 82, in serve
+    await self.main_loop()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 233, in main_loop
+    await asyncio.sleep(0.1)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 718, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 63, in run_service
+    await mqtt_manager.stop()
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 69, in stop
+    await self._task
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 76, in _run
+    await self._connect_and_loop()
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 89, in _connect_and_loop
+    async with Client(
+               ~~~~~~^
+        hostname=mqtt_cfg.host,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        tls_params=tls_params,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ) as client:
+    ^
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/asyncio_mqtt/client.py", line 343, in __init__
+    self._client.message_retry_set(message_retry_set)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Client' object has no attribute 'message_retry_set'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/starlette/routing.py", line 743, in lifespan
+    await receive()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/queues.py", line 186, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2025-09-22 17:45:40 INFO [sicp_service.manager] Starting tablet manager with 1 tablets
+2025-09-22 17:45:40 INFO [sicp_service.mqtt] Starting MQTT manager
+2025-09-22 17:45:40 INFO [__main__] Web server listening on 127.0.0.1:8080
+2025-09-22 17:45:40 INFO [uvicorn.error] Started server process [8716]
+2025-09-22 17:45:40 INFO [uvicorn.error] Waiting for application startup.
+2025-09-22 17:45:40 INFO [sicp_service.mqtt] Connecting to MQTT broker localhost:1883
+2025-09-22 17:45:40 INFO [uvicorn.error] Application startup complete.
+2025-09-22 17:45:40 INFO [uvicorn.error] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2025-09-22 17:45:43 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:45:48 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:45:49 INFO [sicp_service.mqtt] Stopping MQTT manager
+2025-09-22 17:45:49 ERROR [uvicorn.error] Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 61, in run_service
+    await server.serve()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 82, in serve
+    await self.main_loop()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 233, in main_loop
+    await asyncio.sleep(0.1)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 718, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 63, in run_service
+    await mqtt_manager.stop()
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 69, in stop
+    await self._task
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 76, in _run
+    await self._connect_and_loop()
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 89, in _connect_and_loop
+    async with Client(
+               ~~~~~~^
+        hostname=mqtt_cfg.host,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        tls_params=tls_params,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ) as client:
+    ^
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/asyncio_mqtt/client.py", line 343, in __init__
+    self._client.message_retry_set(message_retry_set)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Client' object has no attribute 'message_retry_set'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/starlette/routing.py", line 743, in lifespan
+    await receive()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/queues.py", line 186, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2025-09-22 17:45:52 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:45:57 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:46:26 INFO [sicp_service.manager] Starting tablet manager with 1 tablets
+2025-09-22 17:46:26 INFO [sicp_service.mqtt] Starting MQTT manager
+2025-09-22 17:46:26 INFO [__main__] Web server listening on 127.0.0.1:8080
+2025-09-22 17:46:26 INFO [uvicorn.error] Started server process [8843]
+2025-09-22 17:46:26 INFO [uvicorn.error] Waiting for application startup.
+2025-09-22 17:46:26 INFO [sicp_service.mqtt] Connecting to MQTT broker 192.168.2.44:1883
+2025-09-22 17:46:26 INFO [uvicorn.error] Application startup complete.
+2025-09-22 17:46:26 INFO [uvicorn.error] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2025-09-22 17:46:30 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:46:35 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:46:39 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:46:39 WARNING [sicp_service.manager] Communication failure with spare: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:47:13 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:47:17 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:47:21 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:47:21 WARNING [sicp_service.manager] Communication failure with spare: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:47:54 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:47:57 INFO [sicp_service.mqtt] Stopping MQTT manager
+2025-09-22 17:47:57 ERROR [uvicorn.error] Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 61, in run_service
+    await server.serve()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 82, in serve
+    await self.main_loop()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 233, in main_loop
+    await asyncio.sleep(0.1)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 718, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 63, in run_service
+    await mqtt_manager.stop()
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 69, in stop
+    await self._task
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 76, in _run
+    await self._connect_and_loop()
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 89, in _connect_and_loop
+    async with Client(
+               ~~~~~~^
+        hostname=mqtt_cfg.host,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        tls_params=tls_params,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ) as client:
+    ^
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/asyncio_mqtt/client.py", line 343, in __init__
+    self._client.message_retry_set(message_retry_set)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Client' object has no attribute 'message_retry_set'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/starlette/routing.py", line 743, in lifespan
+    await receive()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/queues.py", line 186, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2025-09-22 17:47:59 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:48:35 INFO [sicp_service.manager] Starting tablet manager with 1 tablets
+2025-09-22 17:48:35 INFO [sicp_service.mqtt] Starting MQTT manager
+2025-09-22 17:48:35 INFO [__main__] Web server listening on 127.0.0.1:8080
+2025-09-22 17:48:35 INFO [uvicorn.error] Started server process [9047]
+2025-09-22 17:48:35 INFO [uvicorn.error] Waiting for application startup.
+2025-09-22 17:48:35 INFO [sicp_service.mqtt] Connecting to MQTT broker 192.168.2.44:1883
+2025-09-22 17:48:35 INFO [uvicorn.error] Application startup complete.
+2025-09-22 17:48:35 INFO [uvicorn.error] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2025-09-22 17:48:38 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:48:42 INFO [uvicorn.access] 127.0.0.1:56230 - "GET / HTTP/1.1" 200
+2025-09-22 17:48:42 INFO [uvicorn.access] 127.0.0.1:56230 - "GET /favicon.ico HTTP/1.1" 404
+2025-09-22 17:48:43 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:48:46 INFO [uvicorn.access] 127.0.0.1:56230 - "GET /logs HTTP/1.1" 200
+2025-09-22 17:48:48 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:48:48 WARNING [sicp_service.manager] Communication failure with spare: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:49:21 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:49:25 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:49:31 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:49:31 WARNING [sicp_service.manager] Communication failure with spare: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:50:04 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:50:08 INFO [sicp_service.mqtt] Stopping MQTT manager
+2025-09-22 17:50:08 ERROR [uvicorn.error] Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 61, in run_service
+    await server.serve()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 82, in serve
+    await self.main_loop()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 233, in main_loop
+    await asyncio.sleep(0.1)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 718, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 63, in run_service
+    await mqtt_manager.stop()
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 69, in stop
+    await self._task
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 76, in _run
+    await self._connect_and_loop()
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 89, in _connect_and_loop
+    async with Client(
+               ~~~~~~^
+        hostname=mqtt_cfg.host,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        tls_params=tls_params,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ) as client:
+    ^
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/asyncio_mqtt/client.py", line 343, in __init__
+    self._client.message_retry_set(message_retry_set)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Client' object has no attribute 'message_retry_set'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/starlette/routing.py", line 743, in lifespan
+    await receive()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/queues.py", line 186, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2025-09-22 17:50:08 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:50:13 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:50:18 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:51:20 INFO [sicp_service.manager] Starting tablet manager with 1 tablets
+2025-09-22 17:51:20 INFO [sicp_service.mqtt] Starting MQTT manager
+2025-09-22 17:51:20 INFO [__main__] Web server listening on 127.0.0.1:8080
+2025-09-22 17:51:20 INFO [uvicorn.error] Started server process [9435]
+2025-09-22 17:51:20 INFO [uvicorn.error] Waiting for application startup.
+2025-09-22 17:51:20 INFO [sicp_service.mqtt] Connecting to MQTT broker 192.168.2.44:1883
+2025-09-22 17:51:20 INFO [uvicorn.error] Application startup complete.
+2025-09-22 17:51:20 INFO [uvicorn.error] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2025-09-22 17:51:24 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:51:28 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:51:32 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:51:32 WARNING [sicp_service.manager] Communication failure with spare: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:52:06 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:52:11 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:52:15 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:52:15 WARNING [sicp_service.manager] Communication failure with spare: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:52:17 INFO [sicp_service.mqtt] Stopping MQTT manager
+2025-09-22 17:52:17 ERROR [uvicorn.error] Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 61, in run_service
+    await server.serve()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 82, in serve
+    await self.main_loop()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 233, in main_loop
+    await asyncio.sleep(0.1)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 718, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 63, in run_service
+    await mqtt_manager.stop()
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 69, in stop
+    await self._task
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 76, in _run
+    await self._connect_and_loop()
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 89, in _connect_and_loop
+    async with Client(
+               ~~~~~~^
+        hostname=mqtt_cfg.host,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        tls_params=tls_params,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ) as client:
+    ^
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/asyncio_mqtt/client.py", line 343, in __init__
+    self._client.message_retry_set(message_retry_set)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Client' object has no attribute 'message_retry_set'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/starlette/routing.py", line 743, in lifespan
+    await receive()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/queues.py", line 186, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2025-09-22 17:52:18 INFO [sicp_service.manager] Starting tablet manager with 1 tablets
+2025-09-22 17:52:18 INFO [sicp_service.mqtt] Starting MQTT manager
+2025-09-22 17:52:18 INFO [__main__] Web server listening on 127.0.0.1:8080
+2025-09-22 17:52:18 INFO [uvicorn.error] Started server process [9584]
+2025-09-22 17:52:18 INFO [uvicorn.error] Waiting for application startup.
+2025-09-22 17:52:18 INFO [sicp_service.mqtt] Connecting to MQTT broker 192.168.2.44:1883
+2025-09-22 17:52:18 INFO [uvicorn.error] Application startup complete.
+2025-09-22 17:52:18 INFO [uvicorn.error] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2025-09-22 17:52:27 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:52:35 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:52:38 INFO [sicp_service.mqtt] Stopping MQTT manager
+2025-09-22 17:52:38 ERROR [uvicorn.error] Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 61, in run_service
+    await server.serve()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 82, in serve
+    await self.main_loop()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 233, in main_loop
+    await asyncio.sleep(0.1)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 718, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 63, in run_service
+    await mqtt_manager.stop()
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 69, in stop
+    await self._task
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 76, in _run
+    await self._connect_and_loop()
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 89, in _connect_and_loop
+    async with Client(
+               ~~~~~~^
+        hostname=mqtt_cfg.host,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        tls_params=tls_params,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ) as client:
+    ^
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/asyncio_mqtt/client.py", line 343, in __init__
+    self._client.message_retry_set(message_retry_set)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Client' object has no attribute 'message_retry_set'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/starlette/routing.py", line 743, in lifespan
+    await receive()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/queues.py", line 186, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2025-09-22 17:52:43 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:53:42 INFO [sicp_service.manager] Starting tablet manager with 1 tablets
+2025-09-22 17:53:42 INFO [sicp_service.mqtt] Starting MQTT manager
+2025-09-22 17:53:42 INFO [__main__] Web server listening on 127.0.0.1:8080
+2025-09-22 17:53:42 INFO [uvicorn.error] Started server process [10080]
+2025-09-22 17:53:42 INFO [uvicorn.error] Waiting for application startup.
+2025-09-22 17:53:42 INFO [sicp_service.mqtt] Connecting to MQTT broker 192.168.2.44:1883
+2025-09-22 17:53:42 INFO [uvicorn.error] Application startup complete.
+2025-09-22 17:53:42 INFO [uvicorn.error] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2025-09-22 17:53:51 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:53:59 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:54:05 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:54:05 WARNING [sicp_service.manager] Communication failure with spare: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:54:21 INFO [sicp_service.mqtt] Stopping MQTT manager
+2025-09-22 17:54:21 ERROR [uvicorn.error] Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 61, in run_service
+    await server.serve()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 82, in serve
+    await self.main_loop()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 233, in main_loop
+    await asyncio.sleep(0.1)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 718, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 63, in run_service
+    await mqtt_manager.stop()
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 69, in stop
+    await self._task
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 76, in _run
+    await self._connect_and_loop()
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 89, in _connect_and_loop
+    async with Client(
+               ~~~~~~^
+        hostname=mqtt_cfg.host,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        tls_params=tls_params,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ) as client:
+    ^
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/asyncio_mqtt/client.py", line 343, in __init__
+    self._client.message_retry_set(message_retry_set)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Client' object has no attribute 'message_retry_set'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/starlette/routing.py", line 743, in lifespan
+    await receive()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/queues.py", line 186, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2025-09-22 17:58:14 INFO [sicp_service.manager] Starting tablet manager with 1 tablets
+2025-09-22 17:58:14 INFO [sicp_service.mqtt] Starting MQTT manager
+2025-09-22 17:58:14 INFO [__main__] Web server listening on 127.0.0.1:8080
+2025-09-22 17:58:14 INFO [uvicorn.error] Started server process [11113]
+2025-09-22 17:58:14 INFO [uvicorn.error] Waiting for application startup.
+2025-09-22 17:58:14 INFO [sicp_service.mqtt] Connecting to MQTT broker 192.168.2.44:1883
+2025-09-22 17:58:14 INFO [uvicorn.error] Application startup complete.
+2025-09-22 17:58:14 INFO [uvicorn.error] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2025-09-22 17:58:19 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:58:25 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:58:31 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:58:32 INFO [uvicorn.access] 127.0.0.1:56416 - "GET / HTTP/1.1" 200
+2025-09-22 17:58:32 INFO [uvicorn.access] 127.0.0.1:56416 - "GET /favicon.ico HTTP/1.1" 404
+2025-09-22 17:58:36 INFO [sicp_service.manager] Setting LED on spare to True #FF0000
+2025-09-22 17:58:36 WARNING [sicp_service.manager] Communication failure with spare: Frame too short to parse LED status: 060101000600
+2025-09-22 17:58:36 INFO [uvicorn.access] 127.0.0.1:56416 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 17:58:36 INFO [uvicorn.access] 127.0.0.1:56416 - "GET / HTTP/1.1" 200
+2025-09-22 17:58:41 INFO [sicp_service.manager] Setting LED on spare to True #0433FF
+2025-09-22 17:58:42 WARNING [sicp_service.manager] Communication failure with spare: Frame too short to parse LED status: 060101000600
+2025-09-22 17:58:42 INFO [uvicorn.access] 127.0.0.1:56416 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 17:58:42 INFO [uvicorn.access] 127.0.0.1:56416 - "GET / HTTP/1.1" 200
+2025-09-22 17:58:45 INFO [sicp_service.manager] Setting LED on spare to True #942192
+2025-09-22 17:58:45 WARNING [sicp_service.manager] Communication failure with spare: Frame too short to parse LED status: 060101000600
+2025-09-22 17:58:45 INFO [uvicorn.access] 127.0.0.1:56416 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 17:58:45 INFO [uvicorn.access] 127.0.0.1:56416 - "GET / HTTP/1.1" 200
+2025-09-22 17:58:49 INFO [sicp_service.manager] Setting LED on spare to True #FFFFFF
+2025-09-22 17:58:50 WARNING [sicp_service.manager] Communication failure with spare: Frame too short to parse LED status: 060101000600
+2025-09-22 17:58:50 INFO [uvicorn.access] 127.0.0.1:56416 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 17:58:50 INFO [uvicorn.access] 127.0.0.1:56416 - "GET / HTTP/1.1" 200
+2025-09-22 17:58:54 INFO [sicp_service.manager] Setting LED on spare to True #FFFFFF
+2025-09-22 17:58:54 WARNING [sicp_service.manager] Communication failure with spare: Frame too short to parse LED status: 060101000600
+2025-09-22 17:58:54 INFO [uvicorn.access] 127.0.0.1:56416 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 17:58:54 INFO [uvicorn.access] 127.0.0.1:56416 - "GET / HTTP/1.1" 200
+2025-09-22 17:58:57 INFO [sicp_service.manager] Setting LED on spare to True #000000
+2025-09-22 17:58:57 WARNING [sicp_service.manager] Communication failure with spare: Frame too short to parse LED status: 060101000600
+2025-09-22 17:58:57 INFO [uvicorn.access] 127.0.0.1:56416 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 17:58:57 INFO [uvicorn.access] 127.0.0.1:56416 - "GET / HTTP/1.1" 200
+2025-09-22 17:59:07 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:59:13 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:59:19 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:59:19 INFO [sicp_service.manager] Setting LED on spare to True #444444
+2025-09-22 17:59:19 WARNING [sicp_service.manager] Communication failure with spare: Frame too short to parse LED status: 060101000600
+2025-09-22 17:59:19 INFO [uvicorn.access] 127.0.0.1:56427 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 17:59:19 INFO [sicp_service.manager] Setting LED on spare to True #AAAAAA
+2025-09-22 17:59:19 INFO [uvicorn.access] 127.0.0.1:56427 - "GET / HTTP/1.1" 200
+2025-09-22 17:59:20 WARNING [sicp_service.manager] Communication failure with spare: Frame too short to parse LED status: 060101000600
+2025-09-22 17:59:20 INFO [sicp_service.manager] Setting LED on spare to True #004D65
+2025-09-22 17:59:20 WARNING [sicp_service.manager] Communication failure with spare: Frame too short to parse LED status: 060101000600
+2025-09-22 17:59:25 INFO [sicp_service.manager] Setting LED on spare to True #FF2600
+2025-09-22 17:59:25 WARNING [sicp_service.manager] Communication failure with spare: Frame too short to parse LED status: 060101000600
+2025-09-22 17:59:25 INFO [uvicorn.access] 127.0.0.1:56436 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 17:59:25 INFO [uvicorn.access] 127.0.0.1:56436 - "GET / HTTP/1.1" 200
+2025-09-22 17:59:27 INFO [sicp_service.manager] Setting power on spare to False
+2025-09-22 17:59:32 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:59:38 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:59:44 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:59:44 WARNING [sicp_service.manager] Communication failure with spare: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:59:44 INFO [uvicorn.access] 127.0.0.1:56436 - "POST /api/tablets/spare/power HTTP/1.1" 200
+2025-09-22 17:59:44 INFO [sicp_service.manager] Setting power on spare to True
+2025-09-22 17:59:44 INFO [uvicorn.access] 127.0.0.1:56436 - "GET / HTTP/1.1" 200
+2025-09-22 17:59:51 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 17:59:57 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 18:00:03 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 18:00:03 WARNING [sicp_service.manager] Communication failure with spare: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 18:00:03 INFO [sicp_service.manager] Setting power on spare to True
+2025-09-22 18:00:08 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 18:00:14 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 18:00:20 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 18:00:20 WARNING [sicp_service.manager] Communication failure with spare: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 18:00:20 INFO [sicp_service.manager] Setting LED on spare to True #000000
+2025-09-22 18:00:20 WARNING [sicp_service.manager] Communication failure with spare: Frame too short to parse LED status: 060101000600
+2025-09-22 18:00:20 INFO [sicp_service.manager] Setting LED on spare to True #FFFFFF
+2025-09-22 18:00:21 WARNING [sicp_service.manager] Communication failure with spare: Frame too short to parse LED status: 060101000600
+2025-09-22 18:00:21 INFO [uvicorn.access] 127.0.0.1:56436 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 18:00:26 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 18:00:32 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 18:00:38 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 18:01:00 INFO [uvicorn.access] 127.0.0.1:56471 - "GET / HTTP/1.1" 200
+2025-09-22 18:01:06 INFO [sicp_service.manager] Setting LED on spare to True #000000
+2025-09-22 18:01:06 WARNING [sicp_service.manager] Communication failure with spare: Frame too short to parse LED status: 060101000600
+2025-09-22 18:01:06 INFO [uvicorn.access] 127.0.0.1:56473 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 18:01:06 INFO [uvicorn.access] 127.0.0.1:56473 - "GET / HTTP/1.1" 200
+2025-09-22 18:01:14 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 18:01:20 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 18:01:26 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 18:01:26 INFO [sicp_service.mqtt] Stopping MQTT manager
+2025-09-22 18:01:26 ERROR [uvicorn.error] Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 61, in run_service
+    await server.serve()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 82, in serve
+    await self.main_loop()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 233, in main_loop
+    await asyncio.sleep(0.1)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 718, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 63, in run_service
+    await mqtt_manager.stop()
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 69, in stop
+    await self._task
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 76, in _run
+    await self._connect_and_loop()
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 89, in _connect_and_loop
+    async with Client(
+               ~~~~~~^
+        hostname=mqtt_cfg.host,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        tls_params=tls_params,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ) as client:
+    ^
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/asyncio_mqtt/client.py", line 343, in __init__
+    self._client.message_retry_set(message_retry_set)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Client' object has no attribute 'message_retry_set'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/starlette/routing.py", line 743, in lifespan
+    await receive()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/queues.py", line 186, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2025-09-22 18:01:28 INFO [sicp_service.manager] Starting tablet manager with 1 tablets
+2025-09-22 18:01:28 INFO [sicp_service.mqtt] Starting MQTT manager
+2025-09-22 18:01:28 INFO [__main__] Web server listening on 127.0.0.1:8080
+2025-09-22 18:01:28 INFO [uvicorn.error] Started server process [11406]
+2025-09-22 18:01:28 INFO [uvicorn.error] Waiting for application startup.
+2025-09-22 18:01:28 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:01:28 INFO [sicp_service.mqtt] Connecting to MQTT broker 192.168.2.44:1883
+2025-09-22 18:01:28 INFO [uvicorn.error] Application startup complete.
+2025-09-22 18:01:28 INFO [uvicorn.error] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2025-09-22 18:01:28 INFO [sicp_service.sicp] SICP GET_POWER -> 192.168.2.71:5000 (expect reply): 06 00 00 18 00 1E
+2025-09-22 18:01:33 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 18:01:39 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 18:01:45 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 18:02:15 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:02:15 INFO [sicp_service.sicp] SICP GET_POWER -> 192.168.2.71:5000 (expect reply): 06 00 00 18 00 1E
+2025-09-22 18:02:20 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 18:02:26 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 18:02:32 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 18:03:02 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:03:03 INFO [sicp_service.sicp] SICP GET_POWER -> 192.168.2.71:5000 (expect reply): 06 00 00 18 00 1E
+2025-09-22 18:03:08 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 18:03:14 WARNING [sicp_service.sicp] Attempt 2/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 18:03:20 WARNING [sicp_service.sicp] Attempt 3/3 failed communicating with 192.168.2.71:5000: Unable to reach 192.168.2.71:5000: timed out
+2025-09-22 18:03:30 INFO [sicp_service.mqtt] Stopping MQTT manager
+2025-09-22 18:03:30 ERROR [uvicorn.error] Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 61, in run_service
+    await server.serve()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 82, in serve
+    await self.main_loop()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 233, in main_loop
+    await asyncio.sleep(0.1)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 718, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 63, in run_service
+    await mqtt_manager.stop()
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 69, in stop
+    await self._task
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 76, in _run
+    await self._connect_and_loop()
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 89, in _connect_and_loop
+    async with Client(
+               ~~~~~~^
+        hostname=mqtt_cfg.host,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        tls_params=tls_params,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ) as client:
+    ^
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/asyncio_mqtt/client.py", line 343, in __init__
+    self._client.message_retry_set(message_retry_set)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Client' object has no attribute 'message_retry_set'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/starlette/routing.py", line 743, in lifespan
+    await receive()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/queues.py", line 186, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2025-09-22 18:04:26 INFO [sicp_service.manager] Starting tablet manager with 1 tablets
+2025-09-22 18:04:26 INFO [sicp_service.mqtt] Starting MQTT manager
+2025-09-22 18:04:26 INFO [__main__] Web server listening on 127.0.0.1:8080
+2025-09-22 18:04:27 INFO [uvicorn.error] Started server process [11679]
+2025-09-22 18:04:27 INFO [uvicorn.error] Waiting for application startup.
+2025-09-22 18:04:27 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:04:27 INFO [sicp_service.mqtt] Connecting to MQTT broker 192.168.2.44:1883
+2025-09-22 18:04:27 INFO [uvicorn.error] Application startup complete.
+2025-09-22 18:04:27 INFO [uvicorn.error] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2025-09-22 18:04:27 INFO [sicp_service.sicp] SICP GET_POWER -> 192.168.2.71:5000 (expect reply): 05 01 00 19 1D
+2025-09-22 18:04:55 INFO [uvicorn.access] 127.0.0.1:56561 - "GET / HTTP/1.1" 200
+2025-09-22 18:04:57 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:04:58 INFO [sicp_service.sicp] SICP GET_POWER -> 192.168.2.71:5000 (expect reply): 05 01 00 19 1D
+2025-09-22 18:05:28 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:05:29 INFO [sicp_service.sicp] SICP GET_POWER -> 192.168.2.71:5000 (expect reply): 05 01 00 19 1D
+2025-09-22 18:05:59 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:06:00 INFO [sicp_service.sicp] SICP GET_POWER -> 192.168.2.71:5000 (expect reply): 05 01 00 19 1D
+2025-09-22 18:06:02 INFO [sicp_service.mqtt] Stopping MQTT manager
+2025-09-22 18:06:02 ERROR [uvicorn.error] Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 61, in run_service
+    await server.serve()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 82, in serve
+    await self.main_loop()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 233, in main_loop
+    await asyncio.sleep(0.1)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 718, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 63, in run_service
+    await mqtt_manager.stop()
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 69, in stop
+    await self._task
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 76, in _run
+    await self._connect_and_loop()
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 89, in _connect_and_loop
+    async with Client(
+               ~~~~~~^
+        hostname=mqtt_cfg.host,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        tls_params=tls_params,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ) as client:
+    ^
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/asyncio_mqtt/client.py", line 343, in __init__
+    self._client.message_retry_set(message_retry_set)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Client' object has no attribute 'message_retry_set'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/starlette/routing.py", line 743, in lifespan
+    await receive()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/queues.py", line 186, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2025-09-22 18:06:03 INFO [sicp_service.manager] Starting tablet manager with 1 tablets
+2025-09-22 18:06:03 INFO [sicp_service.mqtt] Starting MQTT manager
+2025-09-22 18:06:03 INFO [__main__] Web server listening on 127.0.0.1:8080
+2025-09-22 18:06:03 INFO [uvicorn.error] Started server process [11830]
+2025-09-22 18:06:03 INFO [uvicorn.error] Waiting for application startup.
+2025-09-22 18:06:03 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:06:03 INFO [sicp_service.mqtt] Connecting to MQTT broker 192.168.2.44:1883
+2025-09-22 18:06:03 INFO [uvicorn.error] Application startup complete.
+2025-09-22 18:06:03 INFO [uvicorn.error] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2025-09-22 18:06:03 INFO [sicp_service.sicp] SICP GET_POWER -> 192.168.2.71:5000 (expect reply): 05 01 00 19 1D
+2025-09-22 18:06:34 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:06:34 INFO [sicp_service.sicp] SICP GET_POWER -> 192.168.2.71:5000 (expect reply): 05 01 00 19 1D
+2025-09-22 18:07:01 INFO [sicp_service.mqtt] Stopping MQTT manager
+2025-09-22 18:07:01 ERROR [uvicorn.error] Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 61, in run_service
+    await server.serve()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 82, in serve
+    await self.main_loop()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 233, in main_loop
+    await asyncio.sleep(0.1)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 718, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 63, in run_service
+    await mqtt_manager.stop()
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 69, in stop
+    await self._task
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 76, in _run
+    await self._connect_and_loop()
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 89, in _connect_and_loop
+    async with Client(
+               ~~~~~~^
+        hostname=mqtt_cfg.host,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        tls_params=tls_params,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ) as client:
+    ^
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/asyncio_mqtt/client.py", line 343, in __init__
+    self._client.message_retry_set(message_retry_set)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Client' object has no attribute 'message_retry_set'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/starlette/routing.py", line 743, in lifespan
+    await receive()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/queues.py", line 186, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2025-09-22 18:07:27 INFO [sicp_service.manager] Starting tablet manager with 1 tablets
+2025-09-22 18:07:27 INFO [sicp_service.mqtt] Starting MQTT manager
+2025-09-22 18:07:27 INFO [__main__] Web server listening on 127.0.0.1:8080
+2025-09-22 18:07:27 INFO [uvicorn.error] Started server process [12050]
+2025-09-22 18:07:27 INFO [uvicorn.error] Waiting for application startup.
+2025-09-22 18:07:27 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:07:27 INFO [sicp_service.mqtt] Connecting to MQTT broker 192.168.2.44:1883
+2025-09-22 18:07:27 INFO [uvicorn.error] Application startup complete.
+2025-09-22 18:07:27 INFO [uvicorn.error] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2025-09-22 18:07:27 INFO [sicp_service.sicp] SICP GET_POWER -> 192.168.2.71:5000 (expect reply): 05 01 00 19 1D
+2025-09-22 18:07:57 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:07:58 INFO [sicp_service.sicp] SICP GET_POWER -> 192.168.2.71:5000 (expect reply): 05 01 00 19 1D
+2025-09-22 18:08:28 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:08:29 INFO [sicp_service.sicp] SICP GET_POWER -> 192.168.2.71:5000 (expect reply): 05 01 00 19 1D
+2025-09-22 18:08:59 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:09:00 INFO [sicp_service.sicp] SICP GET_POWER -> 192.168.2.71:5000 (expect reply): 05 01 00 19 1D
+2025-09-22 18:09:16 INFO [sicp_service.mqtt] Stopping MQTT manager
+2025-09-22 18:09:16 ERROR [uvicorn.error] Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 61, in run_service
+    await server.serve()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 82, in serve
+    await self.main_loop()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 233, in main_loop
+    await asyncio.sleep(0.1)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 718, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 63, in run_service
+    await mqtt_manager.stop()
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 69, in stop
+    await self._task
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 76, in _run
+    await self._connect_and_loop()
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 90, in _connect_and_loop
+    async with Client(
+               ~~~~~~^
+        hostname=mqtt_cfg.host,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        tls_params=tls_params,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ) as client:
+    ^
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/asyncio_mqtt/client.py", line 343, in __init__
+    self._client.message_retry_set(message_retry_set)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Client' object has no attribute 'message_retry_set'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/starlette/routing.py", line 743, in lifespan
+    await receive()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/queues.py", line 186, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2025-09-22 18:09:46 INFO [sicp_service.manager] Starting tablet manager with 1 tablets
+2025-09-22 18:09:46 INFO [sicp_service.mqtt] Starting MQTT manager
+2025-09-22 18:09:46 INFO [__main__] Web server listening on 127.0.0.1:8080
+2025-09-22 18:09:46 INFO [uvicorn.error] Started server process [12250]
+2025-09-22 18:09:46 INFO [uvicorn.error] Waiting for application startup.
+2025-09-22 18:09:46 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:09:46 INFO [sicp_service.mqtt] Connecting to MQTT broker 192.168.2.44:1883
+2025-09-22 18:09:46 INFO [uvicorn.error] Application startup complete.
+2025-09-22 18:09:46 INFO [uvicorn.error] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2025-09-22 18:09:46 INFO [sicp_service.sicp] SICP GET_POWER -> 192.168.2.71:5000 (expect reply): 05 01 00 19 1D
+2025-09-22 18:10:12 INFO [sicp_service.mqtt] Stopping MQTT manager
+2025-09-22 18:10:12 ERROR [uvicorn.error] Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 61, in run_service
+    await server.serve()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 82, in serve
+    await self.main_loop()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 233, in main_loop
+    await asyncio.sleep(0.1)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 718, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 63, in run_service
+    await mqtt_manager.stop()
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 69, in stop
+    await self._task
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 76, in _run
+    await self._connect_and_loop()
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/mqtt.py", line 90, in _connect_and_loop
+    async with Client(
+               ~~~~~~^
+        hostname=mqtt_cfg.host,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        tls_params=tls_params,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    ) as client:
+    ^
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/asyncio_mqtt/client.py", line 343, in __init__
+    self._client.message_retry_set(message_retry_set)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Client' object has no attribute 'message_retry_set'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/starlette/routing.py", line 743, in lifespan
+    await receive()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/queues.py", line 186, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2025-09-22 18:10:20 INFO [sicp_service.manager] Starting tablet manager with 1 tablets
+2025-09-22 18:10:20 INFO [sicp_service.mqtt] Starting MQTT manager
+2025-09-22 18:10:20 INFO [__main__] Web server listening on 127.0.0.1:8080
+2025-09-22 18:10:20 INFO [uvicorn.error] Started server process [12513]
+2025-09-22 18:10:20 INFO [uvicorn.error] Waiting for application startup.
+2025-09-22 18:10:20 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:10:20 INFO [sicp_service.mqtt] Connecting to MQTT broker 192.168.2.44:1883
+2025-09-22 18:10:20 INFO [uvicorn.error] Application startup complete.
+2025-09-22 18:10:20 INFO [uvicorn.error] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2025-09-22 18:10:20 INFO [sicp_service.mqtt] Connected to MQTT broker 192.168.2.44:1883 as sicp-4457454896
+2025-09-22 18:10:20 INFO [sicp_service.mqtt] Published Home Assistant discovery for spare
+2025-09-22 18:10:20 WARNING [mqtt] unfiltered_messages() is deprecated and will be removed in a future version. Use messages() instead.
+2025-09-22 18:10:20 INFO [sicp_service.mqtt] Published availability sicp_tablets/spare/availability -> online
+2025-09-22 18:10:20 INFO [sicp_service.sicp] SICP GET_POWER -> 192.168.2.71:5000 (expect reply): 05 01 00 19 1D
+2025-09-22 18:10:51 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:10:51 INFO [sicp_service.sicp] SICP GET_POWER -> 192.168.2.71:5000 (expect reply): 05 01 00 19 1D
+2025-09-22 18:11:22 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:11:22 INFO [sicp_service.sicp] SICP GET_POWER -> 192.168.2.71:5000 (expect reply): 05 01 00 19 1D
+2025-09-22 18:11:26 INFO [sicp_service.mqtt] MQTT light command for spare: {"state":"ON","color":{"r":255,"g":137,"b":14}}
+2025-09-22 18:11:26 INFO [sicp_service.manager] Setting LED on spare to True #FF890E
+2025-09-22 18:11:26 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 FF 89 0E 82
+2025-09-22 18:11:27 WARNING [sicp_service.manager] Communication failure with spare: Frame too short to parse LED status: 060101000600
+2025-09-22 18:11:53 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:11:54 INFO [sicp_service.sicp] SICP GET_POWER -> 192.168.2.71:5000 (expect reply): 05 01 00 19 1D
+2025-09-22 18:11:58 INFO [sicp_service.mqtt] Stopping MQTT manager
+2025-09-22 18:11:58 INFO [sicp_service.mqtt] Published availability sicp_tablets/spare/availability -> offline
+2025-09-22 18:11:58 INFO [sicp_service.mqtt] Disconnected from MQTT broker 192.168.2.44:1883
+2025-09-22 18:11:58 INFO [sicp_service.manager] Stopping tablet manager
+2025-09-22 18:11:58 ERROR [uvicorn.error] Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 61, in run_service
+    await server.serve()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 82, in serve
+    await self.main_loop()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 233, in main_loop
+    await asyncio.sleep(0.1)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 718, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/starlette/routing.py", line 743, in lifespan
+    await receive()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/queues.py", line 186, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2025-09-22 18:11:59 INFO [sicp_service.manager] Starting tablet manager with 1 tablets
+2025-09-22 18:11:59 INFO [sicp_service.mqtt] Starting MQTT manager
+2025-09-22 18:11:59 INFO [__main__] Web server listening on 127.0.0.1:8080
+2025-09-22 18:11:59 INFO [uvicorn.error] Started server process [12671]
+2025-09-22 18:11:59 INFO [uvicorn.error] Waiting for application startup.
+2025-09-22 18:11:59 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:11:59 INFO [sicp_service.mqtt] Connecting to MQTT broker 192.168.2.44:1883
+2025-09-22 18:11:59 INFO [uvicorn.error] Application startup complete.
+2025-09-22 18:11:59 INFO [uvicorn.error] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2025-09-22 18:11:59 INFO [sicp_service.mqtt] Connected to MQTT broker 192.168.2.44:1883 as sicp-4457438512
+2025-09-22 18:11:59 INFO [sicp_service.mqtt] Published Home Assistant discovery for spare
+2025-09-22 18:11:59 WARNING [mqtt] unfiltered_messages() is deprecated and will be removed in a future version. Use messages() instead.
+2025-09-22 18:11:59 INFO [sicp_service.mqtt] Published availability sicp_tablets/spare/availability -> online
+2025-09-22 18:12:00 INFO [sicp_service.sicp] SICP GET_POWER -> 192.168.2.71:5000 (expect reply): 05 01 00 19 1D
+2025-09-22 18:12:03 INFO [sicp_service.mqtt] MQTT light command for spare: {"state":"ON","color":{"r":255,"g":158,"b":243}}
+2025-09-22 18:12:03 INFO [sicp_service.manager] Setting LED on spare to True #FF9EF3
+2025-09-22 18:12:03 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 FF 9E F3 68
+2025-09-22 18:12:04 WARNING [sicp_service.manager] Communication failure with spare: Frame too short to parse LED status: 060101000600
+2025-09-22 18:12:30 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:12:31 INFO [sicp_service.sicp] SICP GET_POWER -> 192.168.2.71:5000 (expect reply): 05 01 00 19 1D
+2025-09-22 18:12:37 INFO [sicp_service.mqtt] MQTT light command for spare: {"state":"ON","color":{"r":96,"g":255,"b":61}}
+2025-09-22 18:12:37 INFO [sicp_service.manager] Setting LED on spare to True #60FF3D
+2025-09-22 18:12:37 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 60 FF 3D 58
+2025-09-22 18:12:37 WARNING [sicp_service.manager] Communication failure with spare: Frame too short to parse LED status: 060101000600
+2025-09-22 18:13:01 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:13:02 INFO [sicp_service.sicp] SICP GET_POWER -> 192.168.2.71:5000 (expect reply): 05 01 00 19 1D
+2025-09-22 18:13:08 INFO [sicp_service.mqtt] Stopping MQTT manager
+2025-09-22 18:13:08 INFO [sicp_service.mqtt] Published availability sicp_tablets/spare/availability -> offline
+2025-09-22 18:13:08 INFO [sicp_service.mqtt] Disconnected from MQTT broker 192.168.2.44:1883
+2025-09-22 18:13:08 INFO [sicp_service.manager] Stopping tablet manager
+2025-09-22 18:13:08 ERROR [uvicorn.error] Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 61, in run_service
+    await server.serve()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 82, in serve
+    await self.main_loop()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 233, in main_loop
+    await asyncio.sleep(0.1)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 718, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/starlette/routing.py", line 743, in lifespan
+    await receive()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/queues.py", line 186, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2025-09-22 18:13:10 INFO [sicp_service.manager] Starting tablet manager with 1 tablets
+2025-09-22 18:13:10 INFO [sicp_service.mqtt] Starting MQTT manager
+2025-09-22 18:13:10 INFO [__main__] Web server listening on 127.0.0.1:8080
+2025-09-22 18:13:10 INFO [uvicorn.error] Started server process [12819]
+2025-09-22 18:13:10 INFO [uvicorn.error] Waiting for application startup.
+2025-09-22 18:13:10 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:13:10 INFO [sicp_service.mqtt] Connecting to MQTT broker 192.168.2.44:1883
+2025-09-22 18:13:10 INFO [uvicorn.error] Application startup complete.
+2025-09-22 18:13:10 INFO [uvicorn.error] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2025-09-22 18:13:10 INFO [sicp_service.mqtt] Connected to MQTT broker 192.168.2.44:1883 as sicp-4485994480
+2025-09-22 18:13:10 INFO [sicp_service.mqtt] Published Home Assistant discovery for spare
+2025-09-22 18:13:10 WARNING [mqtt] unfiltered_messages() is deprecated and will be removed in a future version. Use messages() instead.
+2025-09-22 18:13:10 INFO [sicp_service.mqtt] Published availability sicp_tablets/spare/availability -> online
+2025-09-22 18:13:10 INFO [sicp_service.sicp] SICP GET_POWER -> 192.168.2.71:5000 (expect reply): 05 01 00 19 1D
+2025-09-22 18:13:17 INFO [sicp_service.mqtt] MQTT light command for spare: {"state":"ON","brightness":255}
+2025-09-22 18:13:17 INFO [sicp_service.manager] Setting LED on spare to True #000000
+2025-09-22 18:13:17 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 00 00 00 FA
+2025-09-22 18:13:18 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:13:25 INFO [sicp_service.mqtt] MQTT light command for spare: {"state":"ON","color":{"r":92,"g":255,"b":63}}
+2025-09-22 18:13:25 INFO [sicp_service.manager] Setting LED on spare to True #5CFF3F
+2025-09-22 18:13:25 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 5C FF 3F 66
+2025-09-22 18:13:26 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:13:26 INFO [sicp_service.mqtt] MQTT light command for spare: {"state":"ON","color":{"r":62,"g":255,"b":48}}
+2025-09-22 18:13:26 INFO [sicp_service.manager] Setting LED on spare to True #3EFF30
+2025-09-22 18:13:26 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 3E FF 30 0B
+2025-09-22 18:13:27 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:13:27 INFO [sicp_service.mqtt] MQTT light command for spare: {"state":"ON","color":{"r":62,"g":255,"b":48}}
+2025-09-22 18:13:27 INFO [sicp_service.manager] Setting LED on spare to True #3EFF30
+2025-09-22 18:13:27 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 3E FF 30 0B
+2025-09-22 18:13:28 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:13:28 INFO [sicp_service.mqtt] MQTT light command for spare: {"state":"ON","color":{"r":132,"g":255,"b":165}}
+2025-09-22 18:13:28 INFO [sicp_service.manager] Setting LED on spare to True #84FFA5
+2025-09-22 18:13:28 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 84 FF A5 24
+2025-09-22 18:13:29 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:13:29 INFO [sicp_service.mqtt] MQTT light command for spare: {"state":"ON","color":{"r":25,"g":255,"b":52}}
+2025-09-22 18:13:29 INFO [sicp_service.manager] Setting LED on spare to True #19FF34
+2025-09-22 18:13:29 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 19 FF 34 28
+2025-09-22 18:13:30 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:13:30 INFO [sicp_service.mqtt] MQTT light command for spare: {"state":"ON","color":{"r":20,"g":255,"b":43}}
+2025-09-22 18:13:30 INFO [sicp_service.manager] Setting LED on spare to True #14FF2B
+2025-09-22 18:13:30 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 14 FF 2B 3A
+2025-09-22 18:13:31 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:13:31 INFO [sicp_service.mqtt] MQTT light command for spare: {"state":"ON","color":{"r":62,"g":255,"b":48}}
+2025-09-22 18:13:31 INFO [sicp_service.manager] Setting LED on spare to True #3EFF30
+2025-09-22 18:13:31 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 3E FF 30 0B
+2025-09-22 18:13:32 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:13:34 INFO [sicp_service.mqtt] MQTT light command for spare: {"state":"ON","color":{"r":59,"g":38,"b":255}}
+2025-09-22 18:13:34 INFO [sicp_service.manager] Setting LED on spare to True #3B26FF
+2025-09-22 18:13:34 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 3B 26 FF 18
+2025-09-22 18:13:34 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:13:41 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:13:41 INFO [sicp_service.sicp] SICP GET_POWER -> 192.168.2.71:5000 (expect reply): 05 01 00 19 1D
+2025-09-22 18:13:55 INFO [sicp_service.mqtt] MQTT light command for spare: {"state":"ON","color":{"r":255,"g":107,"b":136}}
+2025-09-22 18:13:55 INFO [sicp_service.manager] Setting LED on spare to True #FF6B88
+2025-09-22 18:13:55 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 FF 6B 88 E6
+2025-09-22 18:13:55 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:14:09 INFO [sicp_service.mqtt] MQTT light command for spare: {"state":"ON","color":{"r":255,"g":163,"b":15}}
+2025-09-22 18:14:09 INFO [sicp_service.manager] Setting LED on spare to True #FFA30F
+2025-09-22 18:14:09 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 FF A3 0F A9
+2025-09-22 18:14:09 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:14:11 INFO [sicp_service.mqtt] MQTT light command for spare: {"state":"ON","color":{"r":255,"g":215,"b":96}}
+2025-09-22 18:14:11 INFO [sicp_service.manager] Setting LED on spare to True #FFD760
+2025-09-22 18:14:11 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 FF D7 60 B2
+2025-09-22 18:14:11 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:14:12 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:14:12 INFO [sicp_service.mqtt] MQTT light command for spare: {"state":"ON","color":{"r":255,"g":104,"b":122}}
+2025-09-22 18:14:12 INFO [sicp_service.sicp] SICP GET_POWER -> 192.168.2.71:5000 (expect reply): 05 01 00 19 1D
+2025-09-22 18:14:13 INFO [sicp_service.manager] Setting LED on spare to True #FF687A
+2025-09-22 18:14:13 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 FF 68 7A 17
+2025-09-22 18:14:13 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:14:14 INFO [sicp_service.mqtt] MQTT light command for spare: {"state":"ON","color":{"r":255,"g":0,"b":25}}
+2025-09-22 18:14:14 INFO [sicp_service.manager] Setting LED on spare to True #FF0019
+2025-09-22 18:14:14 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 FF 00 19 1C
+2025-09-22 18:14:14 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:14:15 INFO [sicp_service.mqtt] MQTT light command for spare: {"state":"ON","color":{"r":255,"g":0,"b":25}}
+2025-09-22 18:14:15 INFO [sicp_service.manager] Setting LED on spare to True #FF0019
+2025-09-22 18:14:15 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 FF 00 19 1C
+2025-09-22 18:14:15 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:14:16 INFO [sicp_service.mqtt] MQTT light command for spare: {"state":"ON","color":{"r":255,"g":0,"b":25}}
+2025-09-22 18:14:16 INFO [sicp_service.manager] Setting LED on spare to True #FF0019
+2025-09-22 18:14:16 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 FF 00 19 1C
+2025-09-22 18:14:16 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:14:35 INFO [uvicorn.access] 127.0.0.1:56814 - "GET / HTTP/1.1" 200
+2025-09-22 18:14:37 INFO [sicp_service.manager] Setting LED on spare to False #FF0019
+2025-09-22 18:14:37 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 00 00 00 00 FB
+2025-09-22 18:14:37 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:14:37 WARNING [sicp_service.manager] Communication failure with spare: LED verification failed: expected OFF #000000, got OFF #FF0019
+2025-09-22 18:14:37 INFO [uvicorn.access] 127.0.0.1:56814 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 18:14:37 INFO [uvicorn.access] 127.0.0.1:56814 - "GET / HTTP/1.1" 200
+2025-09-22 18:14:38 INFO [sicp_service.manager] Setting LED on spare to True #FF0019
+2025-09-22 18:14:38 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 FF 00 19 1C
+2025-09-22 18:14:39 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:14:39 INFO [uvicorn.access] 127.0.0.1:56814 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 18:14:39 INFO [uvicorn.access] 127.0.0.1:56814 - "GET / HTTP/1.1" 200
+2025-09-22 18:14:43 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:14:43 INFO [sicp_service.sicp] SICP GET_POWER -> 192.168.2.71:5000 (expect reply): 05 01 00 19 1D
+2025-09-22 18:14:47 INFO [sicp_service.manager] Setting LED on spare to True #FF2600
+2025-09-22 18:14:47 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 FF 26 00 23
+2025-09-22 18:14:47 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:14:48 INFO [uvicorn.access] 127.0.0.1:56823 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 18:14:48 INFO [uvicorn.access] 127.0.0.1:56823 - "GET / HTTP/1.1" 200
+2025-09-22 18:14:50 INFO [sicp_service.manager] Setting LED on spare to True #FF2600
+2025-09-22 18:14:50 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 FF 26 00 23
+2025-09-22 18:14:50 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:14:51 INFO [uvicorn.access] 127.0.0.1:56823 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 18:14:51 INFO [uvicorn.access] 127.0.0.1:56823 - "GET / HTTP/1.1" 200
+2025-09-22 18:14:53 INFO [sicp_service.manager] Setting LED on spare to True #FF2600
+2025-09-22 18:14:53 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 FF 26 00 23
+2025-09-22 18:14:54 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:14:54 INFO [uvicorn.access] 127.0.0.1:56823 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 18:14:54 INFO [uvicorn.access] 127.0.0.1:56823 - "GET / HTTP/1.1" 200
+2025-09-22 18:14:55 INFO [sicp_service.manager] Setting LED on spare to False #FF2600
+2025-09-22 18:14:55 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 00 00 00 00 FB
+2025-09-22 18:14:55 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:14:56 WARNING [sicp_service.manager] Communication failure with spare: LED verification failed: expected OFF #000000, got OFF #FF2600
+2025-09-22 18:14:56 INFO [uvicorn.access] 127.0.0.1:56823 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 18:14:56 INFO [uvicorn.access] 127.0.0.1:56823 - "GET / HTTP/1.1" 200
+2025-09-22 18:14:56 INFO [sicp_service.manager] Setting LED on spare to True #FF2600
+2025-09-22 18:14:56 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 FF 26 00 23
+2025-09-22 18:14:57 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:14:57 INFO [uvicorn.access] 127.0.0.1:56823 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 18:14:57 INFO [uvicorn.access] 127.0.0.1:56823 - "GET / HTTP/1.1" 200
+2025-09-22 18:15:01 INFO [sicp_service.manager] Setting LED on spare to True #E63B7A
+2025-09-22 18:15:01 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 E6 3B 7A 5D
+2025-09-22 18:15:02 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:15:02 INFO [uvicorn.access] 127.0.0.1:56823 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 18:15:02 INFO [uvicorn.access] 127.0.0.1:56823 - "GET / HTTP/1.1" 200
+2025-09-22 18:15:06 INFO [sicp_service.manager] Setting LED on spare to True #E32400
+2025-09-22 18:15:06 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 E3 24 00 3D
+2025-09-22 18:15:07 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:15:07 INFO [uvicorn.access] 127.0.0.1:56823 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 18:15:07 INFO [uvicorn.access] 127.0.0.1:56823 - "GET / HTTP/1.1" 200
+2025-09-22 18:15:11 INFO [sicp_service.manager] Setting LED on spare to True #00F900
+2025-09-22 18:15:11 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 00 F9 00 03
+2025-09-22 18:15:11 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:15:12 INFO [uvicorn.access] 127.0.0.1:56823 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 18:15:12 INFO [uvicorn.access] 127.0.0.1:56823 - "GET / HTTP/1.1" 200
+2025-09-22 18:15:14 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:15:14 INFO [sicp_service.sicp] SICP GET_POWER -> 192.168.2.71:5000 (expect reply): 05 01 00 19 1D
+2025-09-22 18:15:16 INFO [sicp_service.manager] Setting LED on spare to True #0433FF
+2025-09-22 18:15:16 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 04 33 FF 32
+2025-09-22 18:15:16 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:15:16 INFO [uvicorn.access] 127.0.0.1:56823 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 18:15:16 INFO [uvicorn.access] 127.0.0.1:56823 - "GET / HTTP/1.1" 200
+2025-09-22 18:15:19 INFO [sicp_service.manager] Setting LED on spare to True #FF2600
+2025-09-22 18:15:19 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 FF 26 00 23
+2025-09-22 18:15:19 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:15:20 INFO [uvicorn.access] 127.0.0.1:56823 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 18:15:20 INFO [uvicorn.access] 127.0.0.1:56823 - "GET / HTTP/1.1" 200
+2025-09-22 18:15:20 INFO [sicp_service.manager] Setting LED on spare to True #FF2600
+2025-09-22 18:15:20 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 FF 26 00 23
+2025-09-22 18:15:21 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:15:21 INFO [uvicorn.access] 127.0.0.1:56823 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 18:15:21 INFO [uvicorn.access] 127.0.0.1:56823 - "GET / HTTP/1.1" 200
+2025-09-22 18:15:29 INFO [sicp_service.manager] Setting LED on spare to False #FF2600
+2025-09-22 18:15:29 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 00 00 00 00 FB
+2025-09-22 18:15:30 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:15:30 WARNING [sicp_service.manager] Communication failure with spare: LED verification failed: expected OFF #000000, got OFF #FF2600
+2025-09-22 18:15:30 INFO [uvicorn.access] 127.0.0.1:56854 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 18:15:30 INFO [uvicorn.access] 127.0.0.1:56854 - "GET / HTTP/1.1" 200
+2025-09-22 18:15:45 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:15:45 INFO [sicp_service.sicp] SICP GET_POWER -> 192.168.2.71:5000 (expect reply): 05 01 00 19 1D
+2025-09-22 18:16:16 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:16:16 INFO [sicp_service.sicp] SICP GET_POWER -> 192.168.2.71:5000 (expect reply): 05 01 00 19 1D
+2025-09-22 18:16:47 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 18:16:47 INFO [sicp_service.sicp] SICP GET_POWER -> 192.168.2.71:5000 (expect reply): 05 01 00 19 1D

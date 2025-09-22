@@ -50,7 +50,9 @@ async def run_service(cfg: config_module.ServiceConfig) -> None:
         log_config=None,
     )
     server = uvicorn.Server(server_config)
-    server.install_signal_handlers = False
+    # uvicorn 0.27.x expects install_signal_handlers to remain callable, so
+    # replace it with a no-op instead of assigning a boolean.
+    server.install_signal_handlers = lambda: None
 
     await manager.start()
     await mqtt_manager.start()

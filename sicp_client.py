@@ -8,7 +8,7 @@ import socket
 import time
 from typing import Iterable, List, Tuple
 
-DEFAULT_HOST = "192.168.2.98"
+DEFAULT_HOST = "192.168.2.71"
 DEFAULT_PORT = 5000
 FRAME_SIZE = 0x09
 CONTROL_BYTE = 0x01

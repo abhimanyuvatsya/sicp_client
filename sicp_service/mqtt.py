@@ -86,16 +86,23 @@ class MQTTManager:
         tls_params = None
         if mqtt_cfg.tls_enabled:
             tls_params = TLSParameters(ca_certs=mqtt_cfg.tls_ca_cert)
+        client_id = f"{mqtt_cfg.client_id_prefix}-{id(self)}"
         async with Client(
             hostname=mqtt_cfg.host,
             port=mqtt_cfg.port,
             username=mqtt_cfg.username,
             password=mqtt_cfg.password,
-            client_id=f"{mqtt_cfg.client_id_prefix}-{id(self)}",
+            client_id=client_id,
             keepalive=mqtt_cfg.keepalive,
             tls_params=tls_params,
         ) as client:
             self._client = client
+            LOGGER.info(
+                "Connected to MQTT broker %s:%s as %s",
+                mqtt_cfg.host,
+                mqtt_cfg.port,
+                client_id,
+            )
             await self._publish_discovery()
             await self._publish_all_states()
             async with client.unfiltered_messages() as messages:
@@ -117,6 +124,7 @@ class MQTTManager:
                         await stop_task
             await self._publish_availability(AVAILABILITY_OFFLINE)
             self._client = None
+            LOGGER.info("Disconnected from MQTT broker %s:%s", mqtt_cfg.host, mqtt_cfg.port)
 
     async def _subscribe_topics(self) -> None:
         assert self._client is not None
@@ -179,6 +187,7 @@ class MQTTManager:
             return
         for topics in self._topics.values():
             await self._client.publish(topics.availability, payload, qos=1, retain=True)
+            LOGGER.info("Published availability %s -> %s", topics.availability, payload)
 
     async def _publish_all_states(self) -> None:
         for tablet_id, state in self.tablets.all_states().items():
@@ -200,11 +209,13 @@ class MQTTManager:
             "color_mode": "rgb",
         }
         await self._client.publish(topics.light_state, json.dumps(light_state), qos=1, retain=True)
+        LOGGER.debug("Published light state for %s: %s", tablet_id, light_state)
         if state.power_on is None:
             power_payload = "unknown"
         else:
             power_payload = "ON" if state.power_on else "OFF"
         await self._client.publish(topics.power_state, power_payload, qos=1, retain=True)
+        LOGGER.debug("Published power state for %s: %s", tablet_id, power_payload)
 
     async def _handle_state_update(self, tablet_id: str, state: TabletState) -> None:
         if self._client:
@@ -225,9 +236,11 @@ class MQTTManager:
         LOGGER.debug("MQTT message on %s: %s", topic, payload)
         for tablet_id, topics in self._topics.items():
             if topic == topics.light_command:
+                LOGGER.info("MQTT light command for %s: %s", tablet_id, payload)
                 await self._handle_light_command(tablet_id, payload)
                 return
             if topic == topics.power_command:
+                LOGGER.info("MQTT power command for %s: %s", tablet_id, payload)
                 await self._handle_power_command(tablet_id, payload)
                 return
         LOGGER.warning("Received command for unknown topic %s", topic)
@@ -248,11 +261,20 @@ class MQTTManager:
         blue = self._clamp_color(color.get("b", 0))
         if not on:
             red = green = blue = 0
+        LOGGER.debug(
+            "Applying light command to %s -> on=%s rgb=(%s,%s,%s)",
+            tablet_id,
+            on,
+            red,
+            green,
+            blue,
+        )
         await self.tablets.set_light(tablet_id, on=on, red=red, green=green, blue=blue)
 
     async def _handle_power_command(self, tablet_id: str, payload: str) -> None:
         value = payload.strip().upper()
         on = value != "OFF"
+        LOGGER.debug("Applying power command to %s -> %s", tablet_id, on)
         await self.tablets.set_power(tablet_id, on=on)
 
     @staticmethod

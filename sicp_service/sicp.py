@@ -15,7 +15,7 @@ CONTROL_BYTE = 0x01
 GROUP_BYTE = 0x00
 CMD_SET = 0xF3
 CMD_GET = 0xF4
-CMD_POWER = 0x18
+CMD_POWER_STATE = 0x19
 DEFAULT_TIMEOUT = 3.0
 DEFAULT_RETRIES = 2
 DEFAULT_RETRY_DELAY = 1.0
@@ -96,9 +96,9 @@ def build_get_frame() -> bytes:
 def build_power_frame(*, on: bool) -> bytes:
     parts = [
         0x06,
-        0x00,
-        0x00,
-        CMD_POWER,
+        CONTROL_BYTE,
+        GROUP_BYTE,
+        CMD_POWER_STATE,
         0x02 if on else 0x01,
     ]
     parts.append(_checksum(parts))
@@ -107,11 +107,10 @@ def build_power_frame(*, on: bool) -> bytes:
 
 def build_power_query_frame() -> bytes:
     parts = [
-        0x06,
-        0x00,
-        0x00,
-        CMD_POWER,
-        0x00,
+        0x05,
+        CONTROL_BYTE,
+        GROUP_BYTE,
+        CMD_POWER_STATE,
     ]
     parts.append(_checksum(parts))
     return bytes(parts)
@@ -130,11 +129,14 @@ def parse_led_status(frame: bytes) -> LEDStatus:
 def parse_power_reply(frame: bytes) -> Optional[bool]:
     if len(frame) < 5:
         return None
-    if frame[3] != CMD_POWER:
+    if frame[3] != CMD_POWER_STATE:
         return None
-    if frame[4] == 0x02:
+    if len(frame) < 6:
+        return None
+    value = frame[4]
+    if value == 0x02:
         return True
-    if frame[4] == 0x01:
+    if value == 0x01:
         return False
     return None
 
@@ -149,6 +151,16 @@ class SICPClient:
     def __init__(self, host: str, port: int = 5000) -> None:
         self.host = host
         self.port = port
+
+    def _log_command(self, command: str, frame: bytes, *, expect_reply: bool) -> None:
+        LOGGER.info(
+            "SICP %s -> %s:%s (%s): %s",
+            command,
+            self.host,
+            self.port,
+            "expect reply" if expect_reply else "fire-and-forget",
+            format_frame(frame),
+        )
 
     def send_frame(
         self,
@@ -227,6 +239,7 @@ class SICPClient:
         retry_delay: float = DEFAULT_RETRY_DELAY,
     ) -> LEDStatus:
         frame = build_set_frame(on=on, red=red, green=green, blue=blue)
+        self._log_command("SET_LED", frame, expect_reply=True)
         reply = self._send_with_retries(
             frame,
             timeout=timeout,
@@ -234,7 +247,21 @@ class SICPClient:
             retries=retries,
             retry_delay=retry_delay,
         )
-        status = parse_led_status(reply)
+        if len(reply) >= 8 and reply[3] in {CMD_SET, CMD_GET}:
+            status = parse_led_status(reply)
+        else:
+            LOGGER.debug(
+                "SET_LED acknowledgement from %s:%s: %s",
+                self.host,
+                self.port,
+                format_frame(reply),
+            )
+            status = LEDStatus(
+                on=on,
+                red=frame[5],
+                green=frame[6],
+                blue=frame[7],
+            )
         return status
 
     def get_led_status(
@@ -245,6 +272,7 @@ class SICPClient:
         retry_delay: float = DEFAULT_RETRY_DELAY,
     ) -> LEDStatus:
         frame = build_get_frame()
+        self._log_command("GET_LED", frame, expect_reply=True)
         reply = self._send_with_retries(
             frame,
             timeout=timeout,
@@ -263,6 +291,7 @@ class SICPClient:
         retry_delay: float = DEFAULT_RETRY_DELAY,
     ) -> Optional[bool]:
         frame = build_power_frame(on=on)
+        self._log_command("SET_POWER", frame, expect_reply=True)
         reply = self._send_with_retries(
             frame,
             timeout=timeout,
@@ -280,13 +309,23 @@ class SICPClient:
         retry_delay: float = DEFAULT_RETRY_DELAY,
     ) -> Optional[bool]:
         frame = build_power_query_frame()
-        reply = self._send_with_retries(
-            frame,
-            timeout=timeout,
-            expect_reply=True,
-            retries=retries,
-            retry_delay=retry_delay,
-        )
+        self._log_command("GET_POWER", frame, expect_reply=True)
+        try:
+            reply = self._send_with_retries(
+                frame,
+                timeout=timeout,
+                expect_reply=True,
+                retries=retries,
+                retry_delay=retry_delay,
+            )
+        except SICPError as exc:
+            LOGGER.debug(
+                "Power status query failed for %s:%s: %s",
+                self.host,
+                self.port,
+                exc,
+            )
+            return None
         return parse_power_reply(reply)
 
     def get_status(

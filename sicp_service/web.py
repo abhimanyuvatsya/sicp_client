@@ -124,7 +124,8 @@ def create_app(tablets: TabletManager, log_handler: LogBufferHandler) -> FastAPI
                 f"<td>{html.escape(state.hex_color)}</td>"
                 f"<td>{'ON' if state.power_on else 'OFF'}</td>"
                 f"<td><input type='color' id='color-{html.escape(tablet_id)}' value='{state.hex_color}' /></td>"
-                f"<td><button onclick=sendLight('{html.escape(tablet_id)}')>Set Light</button></td>"
+                f"<td><button onclick=applyLight('{html.escape(tablet_id)}',true)>Set Light</button>"
+                f"<button onclick=applyLight('{html.escape(tablet_id)}',false)>Light Off</button></td>"
                 f"<td><button onclick=togglePower('{html.escape(tablet_id)}',true)>Power On</button>"
                 f"<button onclick=togglePower('{html.escape(tablet_id)}',false)>Power Off</button></td></tr>"
             )
@@ -161,13 +162,17 @@ def create_app(tablets: TabletManager, log_handler: LogBufferHandler) -> FastAPI
                 </tbody>
             </table>
             <script>
-            async function sendLight(id) {{
-                const colorInput = document.getElementById(`color-${{id}}`);
-                const color = colorInput ? colorInput.value : '#000000';
+            async function applyLight(id, turnOn) {{
+                const payload = {{ state: turnOn ? 'ON' : 'OFF' }};
+                if (turnOn) {{
+                    const colorInput = document.getElementById(`color-${{id}}`);
+                    const color = colorInput ? colorInput.value : '#000000';
+                    payload.color = {{ hex: color }};
+                }}
                 await fetch(`/api/tablets/${{id}}/light`, {{
                     method: 'POST',
                     headers: {{ 'Content-Type': 'application/json' }},
-                    body: JSON.stringify({{ state: 'ON', color: {{ hex: color }} }}),
+                    body: JSON.stringify(payload),
                 }});
                 window.location.reload();
             }}
