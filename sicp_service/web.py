@@ -8,50 +8,19 @@ from typing import Dict, Optional
 
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import HTMLResponse
-from pydantic import BaseModel, Field, validator
+from pydantic import BaseModel, Field
 
 from .logging_utils import LogBufferHandler
 from .manager import TabletManager, TabletState
+from . import presets
 
 LOGGER = logging.getLogger(__name__)
-
-
-class ColorPayload(BaseModel):
-    hex: Optional[str] = Field(None, description="Hex color string, e.g. #FF0000")
-    r: Optional[int] = Field(None, ge=0, le=255)
-    g: Optional[int] = Field(None, ge=0, le=255)
-    b: Optional[int] = Field(None, ge=0, le=255)
-
-    @validator("hex")
-    def normalize_hex(cls, value: Optional[str]) -> Optional[str]:  # pylint: disable=no-self-argument
-        if value is None:
-            return None
-        stripped = value.strip()
-        if stripped.startswith("#"):
-            stripped = stripped[1:]
-        if len(stripped) != 6:
-            raise ValueError("Hex color must be 6 characters")
-        int(stripped, 16)  # validation
-        return stripped.upper()
-
-    def rgb(self) -> Dict[str, int]:
-        if self.hex:
-            return {
-                "red": int(self.hex[0:2], 16),
-                "green": int(self.hex[2:4], 16),
-                "blue": int(self.hex[4:6], 16),
-            }
-        return {
-            "red": self.r or 0,
-            "green": self.g or 0,
-            "blue": self.b or 0,
-        }
 
 
 class LightRequest(BaseModel):
     state: Optional[str] = Field(None, description="Desired state ON/OFF")
     on: Optional[bool] = Field(None, description="Boolean power flag")
-    color: Optional[ColorPayload] = None
+    preset: Optional[str] = Field(None, description="Preset identifier")
 
 
 class PowerRequest(BaseModel):
@@ -83,16 +52,25 @@ def create_app(tablets: TabletManager, log_handler: LogBufferHandler) -> FastAPI
         desired_on = payload.on
         if desired_on is None and payload.state:
             desired_on = payload.state.upper() != "OFF"
+        if payload.preset == "off":
+            desired_on = False
         if desired_on is None:
             desired_on = True
-        if payload.color:
-            rgb = payload.color.rgb()
-        else:
+        if desired_on:
+            preset_id = payload.preset or current_state.preset
+            if not preset_id:
+                raise HTTPException(status_code=400, detail="Preset must be provided when turning LEDs on")
+            try:
+                preset = presets.resolve(preset_id)
+            except ValueError as exc:
+                raise HTTPException(status_code=400, detail=str(exc)) from exc
             rgb = {
-                "red": current_state.red,
-                "green": current_state.green,
-                "blue": current_state.blue,
+                "red": preset.red,
+                "green": preset.green,
+                "blue": preset.blue,
             }
+        else:
+            rgb = {"red": 0, "green": 0, "blue": 0}
         state = await tablets.set_light(
             tablet_id,
             on=desired_on,
@@ -118,18 +96,29 @@ def create_app(tablets: TabletManager, log_handler: LogBufferHandler) -> FastAPI
         rows = []
         for tablet_id, state in tablets.all_states().items():
             status = "Online" if state.available else "Offline"
+            current_preset = state.preset or ("off" if not state.led_on else None)
+            preset_buttons = []
+            for preset in presets.presets():
+                classes = ["preset"]
+                if preset.identifier == "off":
+                    classes.append("off")
+                if current_preset == preset.identifier:
+                    classes.append("selected")
+                class_attr = " ".join(classes)
+                preset_buttons.append(
+                    f"<button class='{class_attr}' data-preset='{preset.identifier}' style='background-color: {preset.hex_value};'>"
+                    f"{html.escape(preset.label)}</button>"
+                )
+            preset_controls = "".join(preset_buttons)
+            color_display = "Off" if (state.preset == "off" or not state.led_on) else state.hex_color
             rows.append(
                 f"<tr><td>{html.escape(tablet_id)}</td>"
                 f"<td>{html.escape(status)}</td>"
-                f"<td>{html.escape(state.hex_color)}</td>"
-                f"<td>{'ON' if state.power_on else 'OFF'}</td>"
-                f"<td><input type='color' id='color-{html.escape(tablet_id)}' value='{state.hex_color}' /></td>"
-                f"<td><button onclick=applyLight('{html.escape(tablet_id)}',true)>Set Light</button>"
-                f"<button onclick=applyLight('{html.escape(tablet_id)}',false)>Light Off</button></td>"
-                f"<td><button onclick=togglePower('{html.escape(tablet_id)}',true)>Power On</button>"
-                f"<button onclick=togglePower('{html.escape(tablet_id)}',false)>Power Off</button></td></tr>"
+                f"<td>{html.escape(color_display)}</td>"
+                f"<td><div class='preset-grid' data-tablet='{html.escape(tablet_id)}'>{preset_controls}</div></td>"
+                f"<td><button class='wake-button' data-tablet='{html.escape(tablet_id)}'>Wake Device</button></td></tr>"
             )
-        table_html = "".join(rows) or "<tr><td colspan='7'>No tablets configured</td></tr>"
+        table_html = "".join(rows) or "<tr><td colspan='5'>No tablets configured</td></tr>"
         body = f"""
         <html>
         <head>
@@ -140,6 +129,11 @@ def create_app(tablets: TabletManager, log_handler: LogBufferHandler) -> FastAPI
                 th, td {{ border: 1px solid #ccc; padding: 0.5rem; text-align: left; }}
                 th {{ background-color: #f0f0f0; }}
                 button {{ margin-right: 0.25rem; }}
+                .preset-grid {{ display: flex; flex-wrap: wrap; gap: 0.25rem; }}
+                .preset {{ border: none; color: #000; padding: 0.25rem 0.5rem; cursor: pointer; }}
+                .preset.selected {{ outline: 2px solid #000; }}
+                .preset.off {{ background-color: #f5f5f5; color: #000; }}
+                .wake-button {{ border: 1px solid #007bff; background: #fff; color: #007bff; padding: 0.4rem 1rem; cursor: pointer; border-radius: 4px; }}
             </style>
         </head>
         <body>
@@ -150,11 +144,10 @@ def create_app(tablets: TabletManager, log_handler: LogBufferHandler) -> FastAPI
                     <tr>
                         <th>ID</th>
                         <th>Status</th>
+                        <th>Status</th>
                         <th>LED</th>
-                        <th>Power</th>
                         <th>Color</th>
-                        <th>Light Control</th>
-                        <th>Power Control</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -162,28 +155,38 @@ def create_app(tablets: TabletManager, log_handler: LogBufferHandler) -> FastAPI
                 </tbody>
             </table>
             <script>
-            async function applyLight(id, turnOn) {{
-                const payload = {{ state: turnOn ? 'ON' : 'OFF' }};
-                if (turnOn) {{
-                    const colorInput = document.getElementById(`color-${{id}}`);
-                    const color = colorInput ? colorInput.value : '#000000';
-                    payload.color = {{ hex: color }};
-                }}
-                await fetch(`/api/tablets/${{id}}/light`, {{
-                    method: 'POST',
-                    headers: {{ 'Content-Type': 'application/json' }},
-                    body: JSON.stringify(payload),
+            document.querySelectorAll('.preset-grid').forEach(grid => {{
+                grid.addEventListener('click', async event => {{
+                    const target = event.target.closest('.preset');
+                    if (!target) return;
+                    event.preventDefault();
+                    const tabletId = grid.dataset.tablet;
+                    grid.querySelectorAll('.preset').forEach(btn => btn.classList.remove('selected'));
+                    target.classList.add('selected');
+                    const presetId = target.dataset.preset;
+                    const payload = presetId === 'off'
+                        ? {{state: 'OFF'}}
+                        : {{state: 'ON', preset: presetId}};
+                    await fetch(`/api/tablets/${{tabletId}}/light`, {{
+                        method: 'POST',
+                        headers: {{ 'Content-Type': 'application/json' }},
+                        body: JSON.stringify(payload),
+                    }});
+                    window.location.reload();
                 }});
-                window.location.reload();
-            }}
-            async function togglePower(id, on) {{
-                await fetch(`/api/tablets/${{id}}/power`, {{
-                    method: 'POST',
-                    headers: {{ 'Content-Type': 'application/json' }},
-                    body: JSON.stringify({{ state: on ? 'ON' : 'OFF' }}),
+            }});
+            document.querySelectorAll('.wake-button').forEach(button => {{
+                button.addEventListener('click', async event => {{
+                    event.preventDefault();
+                    const tabletId = button.dataset.tablet;
+                    await fetch(`/api/tablets/${{tabletId}}/power`, {{
+                        method: 'POST',
+                        headers: {{ 'Content-Type': 'application/json' }},
+                        body: JSON.stringify({{state: 'ON'}}),
+                    }});
+                    window.location.reload();
                 }});
-                window.location.reload();
-            }}
+            }});
             </script>
         </body>
         </html>

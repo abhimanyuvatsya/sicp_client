@@ -15,27 +15,28 @@ polling:
   timeout_seconds: 5
   retry_attempts: 2
   retry_delay_seconds: 1
+  verification_delay_seconds: 0.5
 web:
   host: 127.0.0.1
   port: 8080
 log_directory: ./logs
 tablets:
-  # - id: bathroom
-  #   name: Bathroom Philips
-  #   host: 192.168.2.189
-  #   port: 5000
-  # - id: guest
-  #   name: Guest Philips
-  #   host: 192.168.2.18
-  #   port: 5000
-  # - id: hallway
-  #   name: Hallway Philips
-  #   host: 192.168.2.92
-  #   port: 5000
-  # - id: office
-  #   name: Office Philips
-  #   host: 192.168.2.98
-  #   port: 5000
+  - id: bathroom
+    name: Bathroom Philips
+    host: 192.168.2.189
+    port: 5000
+  - id: guest
+    name: Guest Philips
+    host: 192.168.2.18
+    port: 5000
+  - id: hallway
+    name: Hallway Philips
+    host: 192.168.2.92
+    port: 5000
+  - id: office
+    name: Office Philips
+    host: 192.168.2.98
+    port: 5000
   - id: spare
     name: Spare Philips
     host: 192.168.2.71

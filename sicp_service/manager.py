@@ -10,6 +10,7 @@ from typing import Awaitable, Callable, Dict, List, Optional
 
 from . import config as config_module
 from . import sicp
+from . import presets
 
 LOGGER = logging.getLogger(__name__)
 
@@ -25,6 +26,7 @@ class TabletState:
     red: int = 0
     green: int = 0
     blue: int = 0
+    preset: Optional[str] = None
     power_on: Optional[bool] = None
     last_error: Optional[str] = None
     last_updated: Optional[datetime] = None
@@ -41,6 +43,7 @@ class TabletState:
             "green": self.green,
             "blue": self.blue,
             "hex_color": self.hex_color,
+            "preset": self.preset,
             "power_on": self.power_on,
             "last_error": self.last_error,
             "last_updated": self.last_updated.isoformat() if self.last_updated else None,
@@ -53,6 +56,7 @@ class TabletState:
             red=self.red,
             green=self.green,
             blue=self.blue,
+            preset=self.preset,
             power_on=self.power_on,
             last_error=self.last_error,
             last_updated=self.last_updated,
@@ -103,25 +107,32 @@ class TabletController:
                     retries=self.polling.retry_attempts,
                     retry_delay=self.polling.retry_delay_seconds,
                 )
-                if (
-                    confirmed.on != on
-                    or confirmed.red != status.red
-                    or confirmed.green != status.green
-                    or confirmed.blue != status.blue
-                ):
-                    raise sicp.SICPError(
-                        "LED verification failed: expected %s #%02X%02X%02X, got %s #%02X%02X%02X"
-                        % (
-                            "ON" if on else "OFF",
-                            status.red,
-                            status.green,
-                            status.blue,
-                            "ON" if confirmed.on else "OFF",
-                            confirmed.red,
-                            confirmed.green,
-                            confirmed.blue,
+                if on:
+                    if (
+                        confirmed.on != on
+                        or confirmed.red != status.red
+                        or confirmed.green != status.green
+                        or confirmed.blue != status.blue
+                    ):
+                        raise sicp.SICPError(
+                            "LED verification failed: expected %s #%02X%02X%02X, got %s #%02X%02X%02X"
+                            % (
+                                "ON" if on else "OFF",
+                                status.red,
+                                status.green,
+                                status.blue,
+                                "ON" if confirmed.on else "OFF",
+                                confirmed.red,
+                                confirmed.green,
+                                confirmed.blue,
+                            )
                         )
-                    )
+                else:
+                    if confirmed.on:
+                        raise sicp.SICPError(
+                            "LED verification failed: expected OFF, got ON #%02X%02X%02X"
+                            % (confirmed.red, confirmed.green, confirmed.blue)
+                        )
                 self._update_state(
                     available=True,
                     led_on=confirmed.on,
@@ -145,26 +156,10 @@ class TabletController:
                     retries=self.polling.retry_attempts,
                     retry_delay=self.polling.retry_delay_seconds,
                 )
-                confirmed = await asyncio.to_thread(
-                    self._client.get_power_status,
-                    timeout=self.polling.timeout_seconds,
-                    retries=self.polling.retry_attempts,
-                    retry_delay=self.polling.retry_delay_seconds,
-                )
                 desired_state = reply if reply is not None else on
-                if confirmed is not None and confirmed != desired_state:
-                    raise sicp.SICPError(
-                        f"Power verification failed: expected {desired_state}, got {confirmed}"
-                    )
-                if confirmed is None:
-                    LOGGER.warning(
-                        "Power confirmation unavailable for %s; assuming state is %s",
-                        self.cfg.identifier,
-                        desired_state,
-                    )
                 self._update_state(
                     available=True,
-                    power_on=confirmed if confirmed is not None else desired_state,
+                    power_on=desired_state,
                     last_error=None,
                 )
             except Exception as exc:  # pylint: disable=broad-except
@@ -174,19 +169,18 @@ class TabletController:
     async def _refresh_state_locked(self) -> None:
         LOGGER.debug("Polling state for %s", self.cfg.identifier)
         try:
-            status = await asyncio.to_thread(
-                self._client.get_status,
+            led_status = await asyncio.to_thread(
+                self._client.get_led_status,
                 timeout=self.polling.timeout_seconds,
                 retries=self.polling.retry_attempts,
                 retry_delay=self.polling.retry_delay_seconds,
             )
             self._update_state(
                 available=True,
-                led_on=status.led.on,
-                red=status.led.red,
-                green=status.led.green,
-                blue=status.led.blue,
-                power_on=status.power_on,
+                led_on=led_status.on,
+                red=led_status.red,
+                green=led_status.green,
+                blue=led_status.blue,
                 last_error=None,
             )
         except Exception as exc:  # pylint: disable=broad-except
@@ -213,6 +207,12 @@ class TabletController:
             self._state.green = green
         if blue is not None:
             self._state.blue = blue
+        if red is not None or green is not None or blue is not None or led_on is not None:
+            matched = presets.match_rgb(self._state.red, self._state.green, self._state.blue)
+            if not self._state.led_on:
+                self._state.preset = "off"
+            else:
+                self._state.preset = matched
         if power_on is not None:
             self._state.power_on = power_on
         if last_error is not None:

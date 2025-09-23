@@ -336,5 +336,4 @@ class SICPClient:
         retry_delay: float = DEFAULT_RETRY_DELAY,
     ) -> TabletStatus:
         led = self.get_led_status(timeout=timeout, retries=retries, retry_delay=retry_delay)
-        power = self.get_power_status(timeout=timeout, retries=retries, retry_delay=retry_delay)
-        return TabletStatus(led=led, power_on=power)
+        return TabletStatus(led=led, power_on=None)

@@ -12,6 +12,7 @@ from typing import Dict, Optional
 from asyncio_mqtt import Client, MqttError, TLSParameters
 
 from . import config as config_module
+from . import presets
 from .manager import TabletManager, TabletState
 
 LOGGER = logging.getLogger(__name__)
@@ -26,6 +27,8 @@ class MQTTTopics:
     availability: str
     light_state: str
     light_command: str
+    light_effect_state: str
+    light_effect_command: str
     power_state: str
     power_command: str
 
@@ -37,6 +40,8 @@ class MQTTTopics:
             availability=f"{base}/availability",
             light_state=f"{base}/light/state",
             light_command=f"{base}/light/set",
+            light_effect_state=f"{base}/light/effect/state",
+            light_effect_command=f"{base}/light/effect/set",
             power_state=f"{base}/power/state",
             power_command=f"{base}/power/set",
         )
@@ -129,6 +134,7 @@ class MQTTManager:
     async def _subscribe_topics(self) -> None:
         assert self._client is not None
         topics = [(value.light_command, 1) for value in self._topics.values()]
+        topics += [(value.light_effect_command, 1) for value in self._topics.values()]
         topics += [(value.power_command, 1) for value in self._topics.values()]
         for topic, qos in topics:
             await self._client.subscribe((topic, qos))
@@ -151,19 +157,21 @@ class MQTTManager:
                 "state_topic": topics.light_state,
                 "command_topic": topics.light_command,
                 "availability_topic": topics.availability,
+                "payload_on": "ON",
+                "payload_off": "OFF",
+                "supported_color_modes": ["onoff"],
+                "effect_state_topic": topics.light_effect_state,
+                "effect_command_topic": topics.light_effect_command,
+                "effect_list": presets.labels(),
                 "qos": 1,
-                "schema": "json",
-                "supported_color_modes": ["rgb"],
                 "device": device_payload,
             }
             power_payload = {
-                "name": f"{tablet_cfg.display_name()} Power",
-                "unique_id": f"sicp_{tablet_cfg.identifier}_power",
-                "state_topic": topics.power_state,
+                "name": f"{tablet_cfg.display_name()} Wake Device",
+                "unique_id": f"sicp_{tablet_cfg.identifier}_wake",
                 "command_topic": topics.power_command,
                 "availability_topic": topics.availability,
-                "payload_on": "ON",
-                "payload_off": "OFF",
+                "payload_press": "WAKE",
                 "qos": 1,
                 "device": device_payload,
             }
@@ -175,7 +183,7 @@ class MQTTManager:
                 retain=True,
             )
             await self._client.publish(
-                f"{discovery_prefix}/switch/{tablet_cfg.identifier}/config",
+                f"{discovery_prefix}/button/{tablet_cfg.identifier}/config",
                 json.dumps(power_payload),
                 qos=1,
                 retain=True,
@@ -199,16 +207,22 @@ class MQTTManager:
         topics = self._topics[tablet_id]
         availability = AVAILABILITY_ONLINE if state.available else AVAILABILITY_OFFLINE
         await self._client.publish(topics.availability, availability, qos=1, retain=True)
-        light_state = {
-            "state": "ON" if state.led_on else "OFF",
-            "color": {
-                "r": state.red,
-                "g": state.green,
-                "b": state.blue,
-            },
-            "color_mode": "rgb",
-        }
+        effect_label = None
+        if state.preset:
+            try:
+                effect_label = presets.resolve(state.preset).label
+            except ValueError:
+                effect_label = None
+        light_state = {"state": "ON" if state.led_on else "OFF"}
+        if effect_label:
+            light_state["effect"] = effect_label
         await self._client.publish(topics.light_state, json.dumps(light_state), qos=1, retain=True)
+        await self._client.publish(
+            topics.light_effect_state,
+            effect_label or "",
+            qos=1,
+            retain=True,
+        )
         LOGGER.debug("Published light state for %s: %s", tablet_id, light_state)
         if state.power_on is None:
             power_payload = "unknown"
@@ -239,6 +253,10 @@ class MQTTManager:
                 LOGGER.info("MQTT light command for %s: %s", tablet_id, payload)
                 await self._handle_light_command(tablet_id, payload)
                 return
+            if topic == topics.light_effect_command:
+                LOGGER.info("MQTT effect command for %s: %s", tablet_id, payload)
+                await self._handle_effect_command(tablet_id, payload)
+                return
             if topic == topics.power_command:
                 LOGGER.info("MQTT power command for %s: %s", tablet_id, payload)
                 await self._handle_power_command(tablet_id, payload)
@@ -246,41 +264,59 @@ class MQTTManager:
         LOGGER.warning("Received command for unknown topic %s", topic)
 
     async def _handle_light_command(self, tablet_id: str, payload: str) -> None:
-        try:
-            message = json.loads(payload)
-        except json.JSONDecodeError as exc:
-            LOGGER.warning("Invalid JSON on %s: %s", tablet_id, exc)
-            return
-        state_value = message.get("state")
-        color = message.get("color", {})
-        on = True
-        if isinstance(state_value, str):
-            on = state_value.upper() != "OFF"
-        red = self._clamp_color(color.get("r", 0))
-        green = self._clamp_color(color.get("g", 0))
-        blue = self._clamp_color(color.get("b", 0))
+        value = payload.strip().upper()
+        on = value != "OFF"
         if not on:
-            red = green = blue = 0
+            LOGGER.debug("Applying light command to %s -> OFF", tablet_id)
+            await self.tablets.set_light(tablet_id, on=False, red=0, green=0, blue=0)
+            return
+        state = self.tablets.get_state(tablet_id)
+        preset_id = state.preset or presets.presets()[0].identifier
+        if preset_id == "off":
+            preset_id = presets.presets()[0].identifier
+        preset = presets.resolve(preset_id)
         LOGGER.debug(
-            "Applying light command to %s -> on=%s rgb=(%s,%s,%s)",
-            tablet_id,
-            on,
-            red,
-            green,
-            blue,
+            "Applying light command to %s -> ON preset %s", tablet_id, preset.identifier
         )
-        await self.tablets.set_light(tablet_id, on=on, red=red, green=green, blue=blue)
+        await self.tablets.set_light(
+            tablet_id,
+            on=True,
+            red=preset.red,
+            green=preset.green,
+            blue=preset.blue,
+        )
+
+    async def _handle_effect_command(self, tablet_id: str, payload: str) -> None:
+        label = payload.strip()
+        try:
+            preset = presets.resolve_label(label)
+        except ValueError as exc:
+            LOGGER.warning("Unknown preset label from MQTT for %s: %s", tablet_id, exc)
+            return
+        LOGGER.debug(
+            "Applying effect command to %s -> %s", tablet_id, preset.identifier
+        )
+        if preset.identifier == "off":
+            await self.tablets.set_light(
+                tablet_id,
+                on=False,
+                red=0,
+                green=0,
+                blue=0,
+            )
+        else:
+            await self.tablets.set_light(
+                tablet_id,
+                on=True,
+                red=preset.red,
+                green=preset.green,
+                blue=preset.blue,
+            )
 
     async def _handle_power_command(self, tablet_id: str, payload: str) -> None:
         value = payload.strip().upper()
-        on = value != "OFF"
-        LOGGER.debug("Applying power command to %s -> %s", tablet_id, on)
-        await self.tablets.set_power(tablet_id, on=on)
-
-    @staticmethod
-    def _clamp_color(raw: object) -> int:
-        try:
-            value = int(raw)
-        except (TypeError, ValueError):
-            return 0
-        return max(0, min(255, value))
+        if value in {"WAKE", "ON"}:
+            LOGGER.debug("Applying wake command to %s", tablet_id)
+            await self.tablets.set_power(tablet_id, on=True)
+            return
+        LOGGER.info("Ignoring unsupported power payload for %s: %s", tablet_id, payload)
