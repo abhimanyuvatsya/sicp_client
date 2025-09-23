@@ -151,6 +151,8 @@ class MQTTManager:
                 "manufacturer": "Philips",
                 "model": "Android Tablet",
             }
+            # Expose presets as MQTT Light effects, but do not include "Off".
+            effect_options = [label for label in presets.labels() if label.lower() != "off"]
             light_payload = {
                 "name": f"{tablet_cfg.display_name()} LED",
                 "unique_id": f"sicp_{tablet_cfg.identifier}_light",
@@ -159,10 +161,9 @@ class MQTTManager:
                 "availability_topic": topics.availability,
                 "payload_on": "ON",
                 "payload_off": "OFF",
-                "supported_color_modes": ["onoff"],
                 "effect_state_topic": topics.light_effect_state,
                 "effect_command_topic": topics.light_effect_command,
-                "effect_list": presets.labels(),
+                "effect_list": effect_options,
                 "qos": 1,
                 "device": device_payload,
             }
@@ -211,19 +212,19 @@ class MQTTManager:
         if state.preset:
             try:
                 effect_label = presets.resolve(state.preset).label
+                if effect_label.lower() == "off":
+                    effect_label = None
             except ValueError:
                 effect_label = None
-        light_state = {"state": "ON" if state.led_on else "OFF"}
-        if effect_label:
-            light_state["effect"] = effect_label
-        await self._client.publish(topics.light_state, json.dumps(light_state), qos=1, retain=True)
+        light_state_str = "ON" if state.led_on else "OFF"
+        await self._client.publish(topics.light_state, light_state_str, qos=1, retain=True)
         await self._client.publish(
             topics.light_effect_state,
             effect_label or "",
             qos=1,
             retain=True,
         )
-        LOGGER.debug("Published light state for %s: %s", tablet_id, light_state)
+        LOGGER.debug("Published light state for %s: %s (effect=%s)", tablet_id, light_state_str, effect_label)
         if state.power_on is None:
             power_payload = "unknown"
         else:
