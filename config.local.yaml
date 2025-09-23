@@ -21,23 +21,23 @@ web:
   port: 8080
 log_directory: ./logs
 tablets:
-  - id: bathroom
+  - id: bathroom_philips
     name: Bathroom Philips
     host: 192.168.2.189
     port: 5000
-  - id: guest
+  - id: guest_philips
     name: Guest Philips
     host: 192.168.2.18
     port: 5000
-  - id: hallway
+  - id: hallway_philips
     name: Hallway Philips
     host: 192.168.2.92
     port: 5000
-  - id: office
+  - id: office_philips
     name: Office Philips
     host: 192.168.2.98
     port: 5000
-  - id: spare
+  - id: spare_philips
     name: Spare Philips
     host: 192.168.2.71
     port: 5000

@@ -21,21 +21,6 @@ env/
 *.env
 .python-version
 
-# Caches and test artifacts
-.mypy_cache/
-.pytest_cache/
-.ruff_cache/
-.cache/
-.coverage
-coverage.xml
-htmlcov/
-
-# Editors/IDEs
-.vscode/
-.idea/
-*.swp
-*.swo
-
 # OS files
 .DS_Store
 Thumbs.db
@@ -43,9 +28,6 @@ Thumbs.db
 # Logs
 logs/
 *.log
-
-# Project-local config
-config.local.yaml
 
 # Ansible
 *.retry

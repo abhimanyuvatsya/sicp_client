@@ -148,13 +148,14 @@ class MQTTManager:
             device_payload = {
                 "identifiers": [f"sicp_tablet_{tablet_cfg.identifier}"],
                 "name": tablet_cfg.display_name(),
-                "manufacturer": "Philips",
+                "manufacturer": "Philips SICP",
                 "model": "Android Tablet",
             }
             # Expose presets as MQTT Light effects, but do not include "Off".
             effect_options = [label for label in presets.labels() if label.lower() != "off"]
             light_payload = {
-                "name": f"{tablet_cfg.display_name()} LED",
+                "name": f"{tablet_cfg.display_name()} LED Strip",
+                "object_id": f"{tablet_cfg.identifier}_led_strip",
                 "unique_id": f"sicp_{tablet_cfg.identifier}_light",
                 "state_topic": topics.light_state,
                 "command_topic": topics.light_command,
@@ -168,7 +169,8 @@ class MQTTManager:
                 "device": device_payload,
             }
             power_payload = {
-                "name": f"{tablet_cfg.display_name()} Wake Device",
+                "name": f"{tablet_cfg.display_name()} Wake",
+                "object_id": f"{tablet_cfg.identifier}_wake_device",
                 "unique_id": f"sicp_{tablet_cfg.identifier}_wake",
                 "command_topic": topics.power_command,
                 "availability_topic": topics.availability,
