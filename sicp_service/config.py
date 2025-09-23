@@ -61,6 +61,7 @@ class PollingConfig:
     timeout_seconds: float = 3.0
     retry_attempts: int = 2
     retry_delay_seconds: float = 1.0
+    verification_delay_seconds: float = 0.0
 
 
 @dataclass(frozen=True)
@@ -141,6 +142,7 @@ def load_config(path: Path) -> ServiceConfig:
         timeout_seconds=float(polling_raw.get("timeout_seconds", 3.0)),
         retry_attempts=int(polling_raw.get("retry_attempts", 2)),
         retry_delay_seconds=float(polling_raw.get("retry_delay_seconds", 1.0)),
+        verification_delay_seconds=float(polling_raw.get("verification_delay_seconds", 0.0)),
     )
 
     web = WebConfig(
