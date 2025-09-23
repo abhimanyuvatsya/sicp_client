@@ -144,7 +144,6 @@ def create_app(tablets: TabletManager, log_handler: LogBufferHandler) -> FastAPI
                     <tr>
                         <th>ID</th>
                         <th>Status</th>
-                        <th>Status</th>
                         <th>LED</th>
                         <th>Color</th>
                         <th>Actions</th>
