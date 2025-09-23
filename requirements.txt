@@ -1,0 +1,5 @@
+asyncio-mqtt==0.16.1
+paho-mqtt<2.0.0
+fastapi==0.109.2
+uvicorn==0.27.1
+PyYAML==6.0.1

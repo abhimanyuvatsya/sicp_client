@@ -1,0 +1,120 @@
+---
+- name: Install required system packages
+  become: true
+  apt:
+    name:
+      - python3
+      - python3-venv
+      - python3-pip
+      - git
+    state: present
+    update_cache: true
+
+- name: Ensure service group exists
+  become: true
+  group:
+    name: "{{ sicp_service_group }}"
+    system: true
+
+- name: Ensure service user exists
+  become: true
+  user:
+    name: "{{ sicp_service_user }}"
+    group: "{{ sicp_service_group }}"
+    system: true
+    create_home: false
+
+- name: Create directories
+  become: true
+  file:
+    path: "{{ item }}"
+    state: directory
+    owner: "{{ sicp_service_user }}"
+    group: "{{ sicp_service_group }}"
+    mode: "0755"
+  loop:
+    - "{{ sicp_service_root }}"
+    - "{{ sicp_service_log_dir }}"
+    - "{{ sicp_service_config_path | dirname }}"
+
+- name: Reset application directory when deploying new code
+  become: true
+  file:
+    path: "{{ sicp_service_root }}/app"
+    state: absent
+  when:
+    - sicp_service_local_src | length > 0 or sicp_service_repo_url | length > 0
+
+- name: Create application directory
+  become: true
+  file:
+    path: "{{ sicp_service_root }}/app"
+    state: directory
+    owner: "{{ sicp_service_user }}"
+    group: "{{ sicp_service_group }}"
+    mode: "0755"
+
+- name: Deploy application from local source
+  become: true
+  copy:
+    src: "{{ sicp_service_local_src }}/"
+    dest: "{{ sicp_service_root }}/app/"
+    owner: "{{ sicp_service_user }}"
+    group: "{{ sicp_service_group }}"
+    mode: "u=rwX,g=rX,o=rX"
+  when: sicp_service_local_src | length > 0
+
+- name: Checkout application from git
+  become: true
+  git:
+    repo: "{{ sicp_service_repo_url }}"
+    dest: "{{ sicp_service_root }}/app"
+    version: "{{ sicp_service_repo_version }}"
+    force: true
+  when: sicp_service_repo_url | length > 0
+
+- name: Ensure application ownership
+  become: true
+  file:
+    path: "{{ sicp_service_root }}/app"
+    state: directory
+    owner: "{{ sicp_service_user }}"
+    group: "{{ sicp_service_group }}"
+    recurse: true
+
+- name: Ensure virtual environment exists
+  become: true
+  command: python3 -m venv {{ sicp_service_root }}/venv
+  args:
+    creates: "{{ sicp_service_root }}/venv/bin/python"
+
+- name: Install Python dependencies
+  become: true
+  pip:
+    requirements: "{{ sicp_service_root }}/app/requirements.txt"
+    virtualenv: "{{ sicp_service_root }}/venv"
+    virtualenv_python: python3
+
+- name: Render configuration file
+  become: true
+  template:
+    src: config.yaml.j2
+    dest: "{{ sicp_service_config_path }}"
+    owner: "{{ sicp_service_user }}"
+    group: "{{ sicp_service_group }}"
+    mode: "0640"
+  notify: Restart sicp service
+
+- name: Install systemd service file
+  become: true
+  template:
+    src: sicp_service.service.j2
+    dest: /etc/systemd/system/sicp_service.service
+  notify: Restart sicp service
+
+- name: Ensure service is enabled
+  become: true
+  systemd:
+    name: sicp_service.service
+    enabled: true
+    daemon_reload: true

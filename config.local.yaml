@@ -1,0 +1,43 @@
+mqtt:
+  host: 192.168.2.44
+  port: 1883
+  base_topic: sicp_tablets
+  client_id_prefix: sicp
+  keepalive: 60
+  tls_enabled: false
+  username: wallpanel
+  password: wallpanel
+home_assistant:
+  enabled: true
+  discovery_prefix: homeassistant
+polling:
+  interval_seconds: 30
+  timeout_seconds: 5
+  retry_attempts: 2
+  retry_delay_seconds: 1
+  verification_delay_seconds: 0.5
+web:
+  host: 127.0.0.1
+  port: 8080
+log_directory: ./logs
+tablets:
+  - id: bathroom_philips
+    name: Bathroom Philips
+    host: 192.168.2.189
+    port: 5000
+  - id: guest_philips
+    name: Guest Philips
+    host: 192.168.2.18
+    port: 5000
+  - id: hallway_philips
+    name: Hallway Philips
+    host: 192.168.2.92
+    port: 5000
+  - id: office_philips
+    name: Office Philips
+    host: 192.168.2.98
+    port: 5000
+  - id: spare_philips
+    name: Spare Philips
+    host: 192.168.2.71
+    port: 5000

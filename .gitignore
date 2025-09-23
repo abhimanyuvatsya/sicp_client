@@ -1,0 +1,33 @@
+# Python bytecode and build artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.so
+*.egg-info/
+.eggs/
+build/
+dist/
+wheelhouse/
+pip-wheel-metadata/
+
+# Virtual environments and local env files
+.venv/
+venv/
+ENV/
+env/
+.env
+*.env
+.python-version
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Ansible
+*.retry

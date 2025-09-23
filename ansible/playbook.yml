@@ -1,0 +1,8 @@
+---
+- name: Deploy SICP tablet service
+  hosts: tablets
+  become: true
+  vars:
+    sicp_service_local_src: "{{ playbook_dir }}/.."
+  roles:
+    - sicp_service
