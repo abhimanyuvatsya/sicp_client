@@ -1,0 +1,51 @@
+# Python bytecode and build artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.so
+*.egg-info/
+.eggs/
+build/
+dist/
+wheelhouse/
+pip-wheel-metadata/
+
+# Virtual environments and local env files
+.venv/
+venv/
+ENV/
+env/
+.env
+*.env
+.python-version
+
+# Caches and test artifacts
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Editors/IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Project-local config
+config.local.yaml
+
+# Ansible
+*.retry

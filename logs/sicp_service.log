@@ -6413,3 +6413,754 @@ asyncio.exceptions.CancelledError
 2025-09-22 19:23:57 INFO [sicp_service.mqtt] Published availability sicp_tablets/office/availability -> online
 2025-09-22 19:23:57 INFO [sicp_service.mqtt] Published availability sicp_tablets/spare/availability -> online
 2025-09-22 19:23:58 INFO [uvicorn.access] 127.0.0.1:59109 - "GET / HTTP/1.1" 200
+2025-09-22 19:24:27 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:24:27 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:24:27 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:24:29 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:24:29 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:24:57 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:24:57 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:24:58 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:25:00 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:25:01 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:25:28 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:25:28 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:25:28 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:25:31 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:25:32 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:25:58 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:25:59 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:25:59 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:26:02 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:26:03 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:26:29 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:26:29 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:26:29 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:26:33 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:26:35 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:26:59 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:27:00 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:27:00 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:27:04 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:27:06 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:27:15 INFO [sicp_service.mqtt] Stopping MQTT manager
+2025-09-22 19:27:15 INFO [sicp_service.mqtt] Published availability sicp_tablets/bathroom/availability -> offline
+2025-09-22 19:27:15 INFO [sicp_service.mqtt] Published availability sicp_tablets/guest/availability -> offline
+2025-09-22 19:27:16 INFO [sicp_service.mqtt] Published availability sicp_tablets/hallway/availability -> offline
+2025-09-22 19:27:16 INFO [sicp_service.mqtt] Published availability sicp_tablets/office/availability -> offline
+2025-09-22 19:27:16 INFO [sicp_service.mqtt] Published availability sicp_tablets/spare/availability -> offline
+2025-09-22 19:27:16 INFO [sicp_service.mqtt] Disconnected from MQTT broker 192.168.2.44:1883
+2025-09-22 19:27:16 INFO [sicp_service.manager] Stopping tablet manager
+2025-09-22 19:27:16 ERROR [uvicorn.error] Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 61, in run_service
+    await server.serve()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 82, in serve
+    await self.main_loop()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 233, in main_loop
+    await asyncio.sleep(0.1)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 718, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/starlette/routing.py", line 743, in lifespan
+    await receive()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/queues.py", line 186, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2025-09-22 19:27:17 INFO [sicp_service.manager] Starting tablet manager with 5 tablets
+2025-09-22 19:27:17 INFO [sicp_service.mqtt] Starting MQTT manager
+2025-09-22 19:27:17 INFO [__main__] Web server listening on 127.0.0.1:8080
+2025-09-22 19:27:17 INFO [uvicorn.error] Started server process [21652]
+2025-09-22 19:27:17 INFO [uvicorn.error] Waiting for application startup.
+2025-09-22 19:27:17 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:27:17 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:27:17 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:27:17 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:27:17 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:27:17 INFO [sicp_service.mqtt] Connecting to MQTT broker 192.168.2.44:1883
+2025-09-22 19:27:17 INFO [uvicorn.error] Application startup complete.
+2025-09-22 19:27:17 INFO [uvicorn.error] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2025-09-22 19:27:17 INFO [sicp_service.mqtt] Connected to MQTT broker 192.168.2.44:1883 as sicp-4487175472
+2025-09-22 19:27:17 INFO [sicp_service.mqtt] Published Home Assistant discovery for bathroom
+2025-09-22 19:27:17 INFO [sicp_service.mqtt] Published Home Assistant discovery for guest
+2025-09-22 19:27:17 INFO [sicp_service.mqtt] Published Home Assistant discovery for hallway
+2025-09-22 19:27:17 INFO [sicp_service.mqtt] Published Home Assistant discovery for office
+2025-09-22 19:27:17 INFO [sicp_service.mqtt] Published Home Assistant discovery for spare
+2025-09-22 19:27:18 WARNING [mqtt] unfiltered_messages() is deprecated and will be removed in a future version. Use messages() instead.
+2025-09-22 19:27:18 INFO [sicp_service.mqtt] Published availability sicp_tablets/bathroom/availability -> online
+2025-09-22 19:27:18 INFO [sicp_service.mqtt] Published availability sicp_tablets/guest/availability -> online
+2025-09-22 19:27:18 INFO [sicp_service.mqtt] Published availability sicp_tablets/hallway/availability -> online
+2025-09-22 19:27:18 INFO [sicp_service.mqtt] Published availability sicp_tablets/office/availability -> online
+2025-09-22 19:27:18 INFO [sicp_service.mqtt] Published availability sicp_tablets/spare/availability -> online
+2025-09-22 19:27:20 INFO [uvicorn.access] 127.0.0.1:59231 - "GET / HTTP/1.1" 200
+2025-09-22 19:27:30 INFO [sicp_service.manager] Setting LED on bathroom to True #00FF00
+2025-09-22 19:27:30 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F3 01 00 FF 00 05
+2025-09-22 19:27:30 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:27:30 INFO [uvicorn.access] 127.0.0.1:59233 - "POST /api/tablets/bathroom/light HTTP/1.1" 200
+2025-09-22 19:27:30 INFO [uvicorn.access] 127.0.0.1:59233 - "GET / HTTP/1.1" 200
+2025-09-22 19:27:47 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:27:47 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:27:47 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:27:49 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:27:51 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:28:18 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:28:18 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:28:18 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:28:20 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:28:25 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:28:48 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:28:48 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:28:48 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:28:55 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:28:56 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:29:00 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.98:5000: Unable to reach 192.168.2.98:5000: timed out
+2025-09-22 19:29:19 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:29:19 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:29:19 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:29:27 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:29:31 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:29:36 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.98:5000: Unable to reach 192.168.2.98:5000: timed out
+2025-09-22 19:29:49 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:29:49 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:29:49 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:30:01 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:30:08 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:30:20 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:30:20 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:30:20 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:30:32 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:30:38 INFO [sicp_service.mqtt] Stopping MQTT manager
+2025-09-22 19:30:38 INFO [sicp_service.mqtt] Published availability sicp_tablets/bathroom/availability -> offline
+2025-09-22 19:30:38 INFO [sicp_service.mqtt] Published availability sicp_tablets/guest/availability -> offline
+2025-09-22 19:30:38 INFO [sicp_service.mqtt] Published availability sicp_tablets/hallway/availability -> offline
+2025-09-22 19:30:38 INFO [sicp_service.mqtt] Published availability sicp_tablets/office/availability -> offline
+2025-09-22 19:30:38 INFO [sicp_service.mqtt] Published availability sicp_tablets/spare/availability -> offline
+2025-09-22 19:30:38 INFO [sicp_service.mqtt] Disconnected from MQTT broker 192.168.2.44:1883
+2025-09-22 19:30:38 INFO [sicp_service.manager] Stopping tablet manager
+2025-09-22 19:30:38 ERROR [uvicorn.error] Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 61, in run_service
+    await server.serve()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 82, in serve
+    await self.main_loop()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 233, in main_loop
+    await asyncio.sleep(0.1)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 718, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/starlette/routing.py", line 743, in lifespan
+    await receive()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/queues.py", line 186, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2025-09-22 19:30:39 INFO [sicp_service.manager] Starting tablet manager with 5 tablets
+2025-09-22 19:30:39 INFO [sicp_service.mqtt] Starting MQTT manager
+2025-09-22 19:30:39 INFO [__main__] Web server listening on 127.0.0.1:8080
+2025-09-22 19:30:39 INFO [uvicorn.error] Started server process [22027]
+2025-09-22 19:30:39 INFO [uvicorn.error] Waiting for application startup.
+2025-09-22 19:30:39 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:30:39 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:30:39 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:30:39 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:30:39 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:30:39 INFO [sicp_service.mqtt] Connecting to MQTT broker 192.168.2.44:1883
+2025-09-22 19:30:39 INFO [uvicorn.error] Application startup complete.
+2025-09-22 19:30:39 INFO [uvicorn.error] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2025-09-22 19:30:39 INFO [sicp_service.mqtt] Connected to MQTT broker 192.168.2.44:1883 as sicp-4413922944
+2025-09-22 19:30:39 INFO [sicp_service.mqtt] Published Home Assistant discovery for bathroom
+2025-09-22 19:30:39 INFO [sicp_service.mqtt] Published Home Assistant discovery for guest
+2025-09-22 19:30:39 INFO [sicp_service.mqtt] Published Home Assistant discovery for hallway
+2025-09-22 19:30:39 INFO [sicp_service.mqtt] Published Home Assistant discovery for office
+2025-09-22 19:30:40 INFO [sicp_service.mqtt] Published Home Assistant discovery for spare
+2025-09-22 19:30:40 WARNING [mqtt] unfiltered_messages() is deprecated and will be removed in a future version. Use messages() instead.
+2025-09-22 19:30:41 INFO [sicp_service.mqtt] Published availability sicp_tablets/bathroom/availability -> online
+2025-09-22 19:30:41 INFO [sicp_service.mqtt] Published availability sicp_tablets/guest/availability -> online
+2025-09-22 19:30:41 INFO [sicp_service.mqtt] Published availability sicp_tablets/hallway/availability -> online
+2025-09-22 19:30:41 INFO [sicp_service.mqtt] Published availability sicp_tablets/office/availability -> online
+2025-09-22 19:30:41 INFO [sicp_service.mqtt] Published availability sicp_tablets/spare/availability -> online
+2025-09-22 19:30:41 INFO [uvicorn.access] 127.0.0.1:59297 - "GET / HTTP/1.1" 200
+2025-09-22 19:30:42 INFO [uvicorn.access] 127.0.0.1:59297 - "GET / HTTP/1.1" 200
+2025-09-22 19:31:10 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:31:10 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:31:10 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:31:10 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:31:11 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:31:40 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:31:40 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:31:40 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:31:40 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:31:42 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:32:11 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:32:11 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:32:11 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:32:12 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:32:14 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:32:41 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:32:41 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:32:42 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:32:42 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:32:45 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:32:51 INFO [sicp_service.mqtt] Stopping MQTT manager
+2025-09-22 19:32:51 INFO [sicp_service.mqtt] Published availability sicp_tablets/bathroom/availability -> offline
+2025-09-22 19:32:51 INFO [sicp_service.mqtt] Published availability sicp_tablets/guest/availability -> offline
+2025-09-22 19:32:51 INFO [sicp_service.mqtt] Published availability sicp_tablets/hallway/availability -> offline
+2025-09-22 19:32:51 INFO [sicp_service.mqtt] Published availability sicp_tablets/office/availability -> offline
+2025-09-22 19:32:51 INFO [sicp_service.mqtt] Published availability sicp_tablets/spare/availability -> offline
+2025-09-22 19:32:51 INFO [sicp_service.mqtt] Disconnected from MQTT broker 192.168.2.44:1883
+2025-09-22 19:32:51 INFO [sicp_service.manager] Stopping tablet manager
+2025-09-22 19:32:51 ERROR [uvicorn.error] Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 61, in run_service
+    await server.serve()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 82, in serve
+    await self.main_loop()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 233, in main_loop
+    await asyncio.sleep(0.1)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 718, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/starlette/routing.py", line 743, in lifespan
+    await receive()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/queues.py", line 186, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2025-09-22 19:32:53 INFO [sicp_service.manager] Starting tablet manager with 5 tablets
+2025-09-22 19:32:53 INFO [sicp_service.mqtt] Starting MQTT manager
+2025-09-22 19:32:53 INFO [__main__] Web server listening on 127.0.0.1:8080
+2025-09-22 19:32:53 INFO [uvicorn.error] Started server process [22236]
+2025-09-22 19:32:53 INFO [uvicorn.error] Waiting for application startup.
+2025-09-22 19:32:53 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:32:53 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:32:53 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:32:53 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:32:53 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:32:53 INFO [sicp_service.mqtt] Connecting to MQTT broker 192.168.2.44:1883
+2025-09-22 19:32:53 INFO [uvicorn.error] Application startup complete.
+2025-09-22 19:32:53 INFO [uvicorn.error] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2025-09-22 19:32:53 INFO [sicp_service.mqtt] Connected to MQTT broker 192.168.2.44:1883 as sicp-4453883184
+2025-09-22 19:32:53 INFO [sicp_service.mqtt] Published Home Assistant discovery for bathroom
+2025-09-22 19:32:53 INFO [sicp_service.mqtt] Published Home Assistant discovery for guest
+2025-09-22 19:32:53 INFO [sicp_service.mqtt] Published Home Assistant discovery for hallway
+2025-09-22 19:32:53 INFO [sicp_service.mqtt] Published Home Assistant discovery for office
+2025-09-22 19:32:53 INFO [sicp_service.mqtt] Published Home Assistant discovery for spare
+2025-09-22 19:32:53 WARNING [mqtt] unfiltered_messages() is deprecated and will be removed in a future version. Use messages() instead.
+2025-09-22 19:32:53 INFO [sicp_service.mqtt] Published availability sicp_tablets/bathroom/availability -> online
+2025-09-22 19:32:53 INFO [sicp_service.mqtt] Published availability sicp_tablets/guest/availability -> online
+2025-09-22 19:32:53 INFO [sicp_service.mqtt] Published availability sicp_tablets/hallway/availability -> online
+2025-09-22 19:32:53 INFO [sicp_service.mqtt] Published availability sicp_tablets/office/availability -> online
+2025-09-22 19:32:53 INFO [sicp_service.mqtt] Published availability sicp_tablets/spare/availability -> online
+2025-09-22 19:32:55 INFO [uvicorn.access] 127.0.0.1:59395 - "GET / HTTP/1.1" 200
+2025-09-22 19:33:23 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:33:23 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:33:23 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:33:25 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:33:26 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:33:53 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:33:53 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:33:53 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:33:56 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:34:01 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:34:24 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:34:24 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:34:24 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:34:30 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:34:34 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:34:48 INFO [sicp_service.mqtt] Stopping MQTT manager
+2025-09-22 19:34:48 INFO [sicp_service.mqtt] Published availability sicp_tablets/bathroom/availability -> offline
+2025-09-22 19:34:48 INFO [sicp_service.mqtt] Published availability sicp_tablets/guest/availability -> offline
+2025-09-22 19:34:48 INFO [sicp_service.mqtt] Published availability sicp_tablets/hallway/availability -> offline
+2025-09-22 19:34:48 INFO [sicp_service.mqtt] Published availability sicp_tablets/office/availability -> offline
+2025-09-22 19:34:49 INFO [sicp_service.mqtt] Published availability sicp_tablets/spare/availability -> offline
+2025-09-22 19:34:49 INFO [sicp_service.mqtt] Disconnected from MQTT broker 192.168.2.44:1883
+2025-09-22 19:34:49 INFO [sicp_service.manager] Stopping tablet manager
+2025-09-22 19:34:49 ERROR [uvicorn.error] Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 61, in run_service
+    await server.serve()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 82, in serve
+    await self.main_loop()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 233, in main_loop
+    await asyncio.sleep(0.1)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 718, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/starlette/routing.py", line 743, in lifespan
+    await receive()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/queues.py", line 186, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2025-09-22 19:34:50 INFO [sicp_service.manager] Starting tablet manager with 5 tablets
+2025-09-22 19:34:50 INFO [sicp_service.mqtt] Starting MQTT manager
+2025-09-22 19:34:50 INFO [__main__] Web server listening on 127.0.0.1:8080
+2025-09-22 19:34:50 INFO [uvicorn.error] Started server process [22470]
+2025-09-22 19:34:50 INFO [uvicorn.error] Waiting for application startup.
+2025-09-22 19:34:50 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:34:50 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:34:50 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:34:50 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:34:50 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:34:50 INFO [sicp_service.mqtt] Connecting to MQTT broker 192.168.2.44:1883
+2025-09-22 19:34:50 INFO [uvicorn.error] Application startup complete.
+2025-09-22 19:34:50 INFO [uvicorn.error] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2025-09-22 19:34:50 INFO [sicp_service.mqtt] Connected to MQTT broker 192.168.2.44:1883 as sicp-4451917104
+2025-09-22 19:34:50 INFO [sicp_service.mqtt] Published Home Assistant discovery for bathroom
+2025-09-22 19:34:50 INFO [sicp_service.mqtt] Published Home Assistant discovery for guest
+2025-09-22 19:34:50 INFO [sicp_service.mqtt] Published Home Assistant discovery for hallway
+2025-09-22 19:34:50 INFO [sicp_service.mqtt] Published Home Assistant discovery for office
+2025-09-22 19:34:50 INFO [sicp_service.mqtt] Published Home Assistant discovery for spare
+2025-09-22 19:34:50 WARNING [mqtt] unfiltered_messages() is deprecated and will be removed in a future version. Use messages() instead.
+2025-09-22 19:34:51 INFO [sicp_service.mqtt] Published availability sicp_tablets/bathroom/availability -> online
+2025-09-22 19:34:51 INFO [sicp_service.mqtt] Published availability sicp_tablets/guest/availability -> online
+2025-09-22 19:34:51 INFO [sicp_service.mqtt] Published availability sicp_tablets/hallway/availability -> online
+2025-09-22 19:34:51 INFO [sicp_service.mqtt] Published availability sicp_tablets/office/availability -> online
+2025-09-22 19:34:51 INFO [sicp_service.mqtt] Published availability sicp_tablets/spare/availability -> online
+2025-09-22 19:34:53 INFO [uvicorn.access] 127.0.0.1:59435 - "GET / HTTP/1.1" 200
+2025-09-22 19:34:56 INFO [sicp_service.manager] Setting LED on bathroom to False #000000
+2025-09-22 19:34:56 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F3 00 00 00 00 FB
+2025-09-22 19:35:01 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.189:5000: Unable to reach 192.168.2.189:5000: timed out
+2025-09-22 19:35:05 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:35:05 INFO [sicp_service.manager] Setting LED on spare to True #FFFF00
+2025-09-22 19:35:05 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 FF FF 00 FA
+2025-09-22 19:35:05 INFO [uvicorn.access] 127.0.0.1:59435 - "POST /api/tablets/bathroom/light HTTP/1.1" 200
+2025-09-22 19:35:05 INFO [sicp_service.manager] Setting LED on bathroom to True #FFFF00
+2025-09-22 19:35:05 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F3 01 FF FF 00 FA
+2025-09-22 19:35:05 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:35:05 INFO [uvicorn.access] 127.0.0.1:59435 - "GET / HTTP/1.1" 200
+2025-09-22 19:35:06 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:35:06 INFO [sicp_service.manager] Setting LED on bathroom to True #0000FF
+2025-09-22 19:35:06 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F3 01 00 00 FF 05
+2025-09-22 19:35:07 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:35:16 INFO [sicp_service.manager] Setting LED on spare to True #FF00FF
+2025-09-22 19:35:16 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 FF 00 FF FA
+2025-09-22 19:35:16 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:35:17 INFO [uvicorn.access] 127.0.0.1:59451 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 19:35:17 INFO [uvicorn.access] 127.0.0.1:59451 - "GET / HTTP/1.1" 200
+2025-09-22 19:35:20 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:35:20 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:35:20 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:35:20 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:35:20 INFO [sicp_service.manager] Setting LED on bathroom to False #000000
+2025-09-22 19:35:20 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F3 00 00 00 00 FB
+2025-09-22 19:35:21 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:35:22 INFO [uvicorn.access] 127.0.0.1:59451 - "POST /api/tablets/bathroom/light HTTP/1.1" 200
+2025-09-22 19:35:22 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:35:22 INFO [uvicorn.access] 127.0.0.1:59451 - "GET / HTTP/1.1" 200
+2025-09-22 19:35:25 INFO [sicp_service.manager] Setting LED on spare to True #00FF00
+2025-09-22 19:35:25 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 00 FF 00 05
+2025-09-22 19:35:26 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:35:26 INFO [uvicorn.access] 127.0.0.1:59451 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 19:35:26 INFO [uvicorn.access] 127.0.0.1:59451 - "GET / HTTP/1.1" 200
+2025-09-22 19:35:31 INFO [sicp_service.manager] Setting LED on spare to False #000000
+2025-09-22 19:35:31 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 00 00 00 00 FB
+2025-09-22 19:35:32 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:35:32 INFO [uvicorn.access] 127.0.0.1:59451 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 19:35:32 INFO [uvicorn.access] 127.0.0.1:59451 - "GET / HTTP/1.1" 200
+2025-09-22 19:35:36 INFO [sicp_service.manager] Setting LED on spare to True #00FFFF
+2025-09-22 19:35:36 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 00 FF FF FA
+2025-09-22 19:35:36 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:35:36 INFO [uvicorn.access] 127.0.0.1:59451 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 19:35:36 INFO [uvicorn.access] 127.0.0.1:59451 - "GET / HTTP/1.1" 200
+2025-09-22 19:35:40 INFO [sicp_service.manager] Setting LED on spare to True #FFFFFF
+2025-09-22 19:35:40 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 FF FF FF 05
+2025-09-22 19:35:40 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:35:40 INFO [uvicorn.access] 127.0.0.1:59451 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 19:35:40 INFO [uvicorn.access] 127.0.0.1:59451 - "GET / HTTP/1.1" 200
+2025-09-22 19:35:50 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:35:50 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:35:50 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:35:51 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:35:52 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:36:21 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:36:21 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:36:21 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:36:22 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:36:23 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:36:41 INFO [sicp_service.mqtt] Stopping MQTT manager
+2025-09-22 19:36:41 INFO [sicp_service.mqtt] Published availability sicp_tablets/bathroom/availability -> offline
+2025-09-22 19:36:41 INFO [sicp_service.mqtt] Published availability sicp_tablets/guest/availability -> offline
+2025-09-22 19:36:41 INFO [sicp_service.mqtt] Published availability sicp_tablets/hallway/availability -> offline
+2025-09-22 19:36:41 INFO [sicp_service.mqtt] Published availability sicp_tablets/office/availability -> offline
+2025-09-22 19:36:42 INFO [sicp_service.mqtt] Published availability sicp_tablets/spare/availability -> offline
+2025-09-22 19:36:42 INFO [sicp_service.mqtt] Disconnected from MQTT broker 192.168.2.44:1883
+2025-09-22 19:36:42 INFO [sicp_service.manager] Stopping tablet manager
+2025-09-22 19:36:42 ERROR [uvicorn.error] Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 61, in run_service
+    await server.serve()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 82, in serve
+    await self.main_loop()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 233, in main_loop
+    await asyncio.sleep(0.1)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 718, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/starlette/routing.py", line 743, in lifespan
+    await receive()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/queues.py", line 186, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2025-09-22 19:37:08 INFO [sicp_service.manager] Starting tablet manager with 5 tablets
+2025-09-22 19:37:08 INFO [sicp_service.mqtt] Starting MQTT manager
+2025-09-22 19:37:08 INFO [__main__] Web server listening on 127.0.0.1:8080
+2025-09-22 19:37:08 INFO [uvicorn.error] Started server process [23167]
+2025-09-22 19:37:08 INFO [uvicorn.error] Waiting for application startup.
+2025-09-22 19:37:08 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:37:08 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:37:08 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:37:08 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:37:08 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:37:08 INFO [sicp_service.mqtt] Connecting to MQTT broker 192.168.2.44:1883
+2025-09-22 19:37:08 INFO [uvicorn.error] Application startup complete.
+2025-09-22 19:37:08 INFO [uvicorn.error] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2025-09-22 19:37:08 INFO [sicp_service.mqtt] Connected to MQTT broker 192.168.2.44:1883 as sicp-4417477936
+2025-09-22 19:37:08 INFO [sicp_service.mqtt] Published Home Assistant discovery for bathroom
+2025-09-22 19:37:08 INFO [sicp_service.mqtt] Published Home Assistant discovery for guest
+2025-09-22 19:37:08 INFO [sicp_service.mqtt] Published Home Assistant discovery for hallway
+2025-09-22 19:37:08 INFO [sicp_service.mqtt] Published Home Assistant discovery for office
+2025-09-22 19:37:08 INFO [sicp_service.mqtt] Published Home Assistant discovery for spare
+2025-09-22 19:37:09 WARNING [mqtt] unfiltered_messages() is deprecated and will be removed in a future version. Use messages() instead.
+2025-09-22 19:37:09 INFO [sicp_service.mqtt] Published availability sicp_tablets/bathroom/availability -> online
+2025-09-22 19:37:09 INFO [sicp_service.mqtt] Published availability sicp_tablets/guest/availability -> online
+2025-09-22 19:37:09 INFO [sicp_service.mqtt] Published availability sicp_tablets/hallway/availability -> online
+2025-09-22 19:37:09 INFO [sicp_service.mqtt] Published availability sicp_tablets/office/availability -> online
+2025-09-22 19:37:09 INFO [sicp_service.mqtt] Published availability sicp_tablets/spare/availability -> online
+2025-09-22 19:37:11 INFO [uvicorn.access] 127.0.0.1:59517 - "GET / HTTP/1.1" 200
+2025-09-22 19:37:15 INFO [sicp_service.manager] Setting LED on spare to False #000000
+2025-09-22 19:37:15 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 00 00 00 00 FB
+2025-09-22 19:37:15 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:37:16 INFO [uvicorn.access] 127.0.0.1:59517 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 19:37:16 INFO [uvicorn.access] 127.0.0.1:59517 - "GET / HTTP/1.1" 200
+2025-09-22 19:37:17 INFO [sicp_service.manager] Setting LED on spare to True #FFFFFF
+2025-09-22 19:37:17 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 FF FF FF 05
+2025-09-22 19:37:18 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:37:18 INFO [uvicorn.access] 127.0.0.1:59517 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 19:37:18 INFO [uvicorn.access] 127.0.0.1:59517 - "GET / HTTP/1.1" 200
+2025-09-22 19:37:38 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:37:38 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:37:38 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:37:39 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:37:39 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:38:09 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:38:09 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:38:09 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:38:10 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:38:11 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:38:25 INFO [sicp_service.mqtt] Stopping MQTT manager
+2025-09-22 19:38:25 INFO [sicp_service.mqtt] Published availability sicp_tablets/bathroom/availability -> offline
+2025-09-22 19:38:25 INFO [sicp_service.mqtt] Published availability sicp_tablets/guest/availability -> offline
+2025-09-22 19:38:25 INFO [sicp_service.mqtt] Published availability sicp_tablets/hallway/availability -> offline
+2025-09-22 19:38:25 INFO [sicp_service.mqtt] Published availability sicp_tablets/office/availability -> offline
+2025-09-22 19:38:25 INFO [sicp_service.mqtt] Published availability sicp_tablets/spare/availability -> offline
+2025-09-22 19:38:25 INFO [sicp_service.mqtt] Disconnected from MQTT broker 192.168.2.44:1883
+2025-09-22 19:38:25 INFO [sicp_service.manager] Stopping tablet manager
+2025-09-22 19:38:25 ERROR [uvicorn.error] Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 61, in run_service
+    await server.serve()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 82, in serve
+    await self.main_loop()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 233, in main_loop
+    await asyncio.sleep(0.1)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 718, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/starlette/routing.py", line 743, in lifespan
+    await receive()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/queues.py", line 186, in get
+    await getter
+asyncio.exceptions.CancelledError
+
+2025-09-22 19:38:26 INFO [sicp_service.manager] Starting tablet manager with 5 tablets
+2025-09-22 19:38:26 INFO [sicp_service.mqtt] Starting MQTT manager
+2025-09-22 19:38:26 INFO [__main__] Web server listening on 127.0.0.1:8080
+2025-09-22 19:38:26 INFO [uvicorn.error] Started server process [23331]
+2025-09-22 19:38:26 INFO [uvicorn.error] Waiting for application startup.
+2025-09-22 19:38:26 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:38:26 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:38:26 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:38:26 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:38:26 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:38:26 INFO [sicp_service.mqtt] Connecting to MQTT broker 192.168.2.44:1883
+2025-09-22 19:38:26 INFO [uvicorn.error] Application startup complete.
+2025-09-22 19:38:26 INFO [uvicorn.error] Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2025-09-22 19:38:26 INFO [sicp_service.mqtt] Connected to MQTT broker 192.168.2.44:1883 as sicp-4451835184
+2025-09-22 19:38:26 INFO [sicp_service.mqtt] Published Home Assistant discovery for bathroom
+2025-09-22 19:38:26 INFO [sicp_service.mqtt] Published Home Assistant discovery for guest
+2025-09-22 19:38:26 INFO [sicp_service.mqtt] Published Home Assistant discovery for hallway
+2025-09-22 19:38:26 INFO [sicp_service.mqtt] Published Home Assistant discovery for office
+2025-09-22 19:38:26 INFO [sicp_service.mqtt] Published Home Assistant discovery for spare
+2025-09-22 19:38:27 WARNING [mqtt] unfiltered_messages() is deprecated and will be removed in a future version. Use messages() instead.
+2025-09-22 19:38:27 INFO [sicp_service.mqtt] Published availability sicp_tablets/bathroom/availability -> online
+2025-09-22 19:38:27 INFO [sicp_service.mqtt] Published availability sicp_tablets/guest/availability -> online
+2025-09-22 19:38:27 INFO [sicp_service.mqtt] Published availability sicp_tablets/hallway/availability -> online
+2025-09-22 19:38:27 INFO [sicp_service.mqtt] Published availability sicp_tablets/office/availability -> online
+2025-09-22 19:38:27 INFO [sicp_service.mqtt] Published availability sicp_tablets/spare/availability -> online
+2025-09-22 19:38:27 INFO [uvicorn.access] 127.0.0.1:59556 - "GET / HTTP/1.1" 200
+2025-09-22 19:38:31 INFO [uvicorn.access] 127.0.0.1:59556 - "GET / HTTP/1.1" 200
+2025-09-22 19:38:33 INFO [sicp_service.manager] Setting LED on spare to True #FF0000
+2025-09-22 19:38:33 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 FF 00 00 05
+2025-09-22 19:38:34 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:38:34 INFO [uvicorn.access] 127.0.0.1:59556 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 19:38:34 INFO [uvicorn.access] 127.0.0.1:59556 - "GET / HTTP/1.1" 200
+2025-09-22 19:38:36 INFO [sicp_service.manager] Setting LED on spare to True #00FF00
+2025-09-22 19:38:36 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 00 FF 00 05
+2025-09-22 19:38:37 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:38:37 INFO [uvicorn.access] 127.0.0.1:59556 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 19:38:37 INFO [uvicorn.access] 127.0.0.1:59556 - "GET / HTTP/1.1" 200
+2025-09-22 19:38:39 INFO [sicp_service.manager] Setting LED on spare to True #FF00FF
+2025-09-22 19:38:39 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 FF 00 FF FA
+2025-09-22 19:38:39 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:38:40 INFO [uvicorn.access] 127.0.0.1:59556 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 19:38:40 INFO [uvicorn.access] 127.0.0.1:59556 - "GET / HTTP/1.1" 200
+2025-09-22 19:38:41 INFO [sicp_service.manager] Setting LED on spare to True #00FFFF
+2025-09-22 19:38:41 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 00 FF FF FA
+2025-09-22 19:38:41 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:38:41 INFO [uvicorn.access] 127.0.0.1:59556 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 19:38:41 INFO [uvicorn.access] 127.0.0.1:59556 - "GET / HTTP/1.1" 200
+2025-09-22 19:38:43 INFO [sicp_service.manager] Setting LED on spare to True #FFFF00
+2025-09-22 19:38:43 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 FF FF 00 FA
+2025-09-22 19:38:43 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:38:44 INFO [uvicorn.access] 127.0.0.1:59556 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 19:38:44 INFO [uvicorn.access] 127.0.0.1:59556 - "GET / HTTP/1.1" 200
+2025-09-22 19:38:45 INFO [sicp_service.manager] Setting LED on spare to False #000000
+2025-09-22 19:38:45 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 00 00 00 00 FB
+2025-09-22 19:38:46 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:38:46 INFO [uvicorn.access] 127.0.0.1:59556 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 19:38:46 INFO [uvicorn.access] 127.0.0.1:59556 - "GET / HTTP/1.1" 200
+2025-09-22 19:38:49 INFO [sicp_service.manager] Setting LED on spare to True #FFFFFF
+2025-09-22 19:38:49 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 FF FF FF 05
+2025-09-22 19:38:49 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:38:49 INFO [uvicorn.access] 127.0.0.1:59556 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 19:38:49 INFO [uvicorn.access] 127.0.0.1:59556 - "GET / HTTP/1.1" 200
+2025-09-22 19:38:56 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:38:56 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:38:56 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:38:56 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:38:58 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:39:06 INFO [sicp_service.manager] Setting LED on spare to True #FF0000
+2025-09-22 19:39:06 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 FF 00 00 05
+2025-09-22 19:39:06 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:39:07 INFO [uvicorn.access] 127.0.0.1:59580 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 19:39:07 INFO [uvicorn.access] 127.0.0.1:59580 - "GET / HTTP/1.1" 200
+2025-09-22 19:39:09 INFO [sicp_service.manager] Setting LED on spare to True #00FF00
+2025-09-22 19:39:09 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 00 FF 00 05
+2025-09-22 19:39:09 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:39:10 INFO [uvicorn.access] 127.0.0.1:59580 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 19:39:10 INFO [uvicorn.access] 127.0.0.1:59580 - "GET / HTTP/1.1" 200
+2025-09-22 19:39:13 INFO [sicp_service.manager] Setting LED on spare to True #0000FF
+2025-09-22 19:39:13 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 01 00 00 FF 05
+2025-09-22 19:39:13 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:39:13 INFO [uvicorn.access] 127.0.0.1:59580 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 19:39:13 INFO [uvicorn.access] 127.0.0.1:59580 - "GET / HTTP/1.1" 200
+2025-09-22 19:39:15 INFO [sicp_service.manager] Setting LED on spare to False #000000
+2025-09-22 19:39:15 INFO [sicp_service.sicp] SICP SET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F3 00 00 00 00 FB
+2025-09-22 19:39:15 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:39:15 INFO [uvicorn.access] 127.0.0.1:59580 - "POST /api/tablets/spare/light HTTP/1.1" 200
+2025-09-22 19:39:15 INFO [uvicorn.access] 127.0.0.1:59580 - "GET / HTTP/1.1" 200
+2025-09-22 19:39:26 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:39:26 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:39:27 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:39:27 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:39:30 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:39:57 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:39:57 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:39:57 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:39:59 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:40:01 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:40:04 WARNING [sicp_service.sicp] Attempt 1/3 failed communicating with 192.168.2.189:5000: Unable to reach 192.168.2.189:5000: timed out
+2025-09-22 19:40:27 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.71:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:40:28 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.92:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:40:28 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.18:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:40:32 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.98:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:40:36 INFO [sicp_service.sicp] SICP GET_LED -> 192.168.2.189:5000 (expect reply): 09 01 00 F4 00 00 00 00 FC
+2025-09-22 19:40:36 INFO [sicp_service.mqtt] Stopping MQTT manager
+2025-09-22 19:40:36 INFO [sicp_service.mqtt] Published availability sicp_tablets/bathroom/availability -> offline
+2025-09-22 19:40:36 INFO [sicp_service.mqtt] Published availability sicp_tablets/guest/availability -> offline
+2025-09-22 19:40:36 INFO [sicp_service.mqtt] Published availability sicp_tablets/hallway/availability -> offline
+2025-09-22 19:40:36 INFO [sicp_service.mqtt] Published availability sicp_tablets/office/availability -> offline
+2025-09-22 19:40:36 INFO [sicp_service.mqtt] Published availability sicp_tablets/spare/availability -> offline
+2025-09-22 19:40:36 INFO [sicp_service.mqtt] Disconnected from MQTT broker 192.168.2.44:1883
+2025-09-22 19:40:36 INFO [sicp_service.manager] Stopping tablet manager
+2025-09-22 19:40:36 ERROR [uvicorn.error] Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Users/abhivatsya/Code/sicp_client/sicp_service/main.py", line 61, in run_service
+    await server.serve()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 82, in serve
+    await self.main_loop()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/server.py", line 233, in main_loop
+    await asyncio.sleep(0.1)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/tasks.py", line 718, in sleep
+    return await future
+           ^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/runners.py", line 123, in run
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/starlette/routing.py", line 743, in lifespan
+    await receive()
+  File "/Users/abhivatsya/Code/sicp_client/.venv/lib/python3.13/site-packages/uvicorn/lifespan/on.py", line 137, in receive
+    return await self.receive_queue.get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/asyncio/queues.py", line 186, in get
+    await getter
+asyncio.exceptions.CancelledError
+
