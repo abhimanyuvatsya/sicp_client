@@ -154,7 +154,7 @@ class MQTTManager:
             # Expose presets as MQTT Light effects, but do not include "Off".
             effect_options = [label for label in presets.labels() if label.lower() != "off"]
             light_payload = {
-                "name": f"{tablet_cfg.display_name()} LED Strip",
+                "name": f"LED Strip",
                 "object_id": f"{tablet_cfg.identifier}_led_strip",
                 "unique_id": f"sicp_{tablet_cfg.identifier}_light",
                 "state_topic": topics.light_state,
@@ -169,7 +169,7 @@ class MQTTManager:
                 "device": device_payload,
             }
             power_payload = {
-                "name": f"{tablet_cfg.display_name()} Wake",
+                "name": f"Wake Device",
                 "object_id": f"{tablet_cfg.identifier}_wake_device",
                 "unique_id": f"sicp_{tablet_cfg.identifier}_wake",
                 "command_topic": topics.power_command,
